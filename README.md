@@ -39,11 +39,6 @@ I am actively updating this space. Currently, I have uploaded comprehensive solu
 
 ---
 
-## 🚀 The Road Ahead: UPSC ISS
-
-My ultimate goal with this repository is to systematically solve **all the past papers of the UPSC Indian Statistical Service (ISS)**. 
-
-As I progress in my preparation, I will be updating this repository with detailed, subjective solutions for ISS General Economics, Statistics Paper I, II, III, and IV. 
 
 If you find these notes helpful, feel free to use them for your own revision. Let's crack these exams together! 
 
