@@ -66,6 +66,10 @@
         <p>Rigorous, step-by-step descriptive proofs for the Indian Statistical Institute Junior Research Fellowship.</p>
     </div>
 
+
+
+
+    
     <!-- ==================== Q1 ==================== -->
     <div class="question-section" id="q1">
         <h2>📌 Q1 Analysis of Recursive Sequences (12 Marks)</h2>
@@ -264,20 +268,571 @@
         </div>
     </div>
 
-    <!-- ==================== SUMMARY & PRACTICE ==================== -->
+
+
+    <div class="question-section" id="q5">
+    <h2>📌 Q5 Bounds on Variance and Expectations (12 Marks)</h2>
+
+    <div style="background-color: #f8fafc; padding: 15px; border-left: 4px solid #4a5568; margin-bottom: 20px; border-radius: 4px;">
+        <strong>Problem Statement:</strong> Let $X$ be a random variable taking values in the interval $[1, 10]$.
+        <br><br>
+        (a) If $\mathbb{E}(X) = 2.8$, then show that the standard deviation of $X$ cannot exceed $3.6$.<br>
+        (b) If $X_1$ and $X_2$ are two independent random variables having the same distribution as $X$, then show that $\mathbb{E}\left(\frac{X_1}{X_2}\right)$ cannot be smaller than 1.
+    </div>
+
+    <h3>🧠 Approach &amp; Key Concepts</h3>
+    <p>This problem tests your ability to establish bounds on moments of bounded random variables. 
+    <ul>
+        <li><strong>For part (a):</strong> We will use the algebraic property of bounded variables. Since $X \in [a, b]$, the product $(X-a)(X-b)$ is always non-positive. Taking the expectation of this quadratic provides a strict upper bound on the second moment, $\mathbb{E}(X^2)$, and consequently the variance. (This is related to the Bhatia-Davis inequality).</li>
+        <li><strong>For part (b):</strong> We will exploit the independence of the variables to separate the expectations, and then apply <strong>Jensen's Inequality</strong> for the strictly convex function $g(x) = 1/x$.</li>
+    </ul>
+    </p>
+
+    <h3>✍️ Step-by-Step Proof / Derivation</h3>
+    
+    <p><strong>Step 1: Establishing the Quadratic Bound for Part (a)</strong></p>
+    <p>We are given that $X$ takes values in the interval $[1, 10]$. Therefore, with probability 1:</p>
+    <div class="math-display">
+        $$ 1 \leq X \leq 10 $$
+    </div>
+    <p>This inequality implies that $(X - 1) \geq 0$ and $(X - 10) \leq 0$. Multiplying these two terms yields a non-positive result:</p>
+    <div class="math-display">
+        $$ (X - 1)(X - 10) \leq 0 $$
+    </div>
+    <p>Expanding this expression gives:</p>
+    <div class="math-display">
+        $$ X^2 - 11X + 10 \leq 0 \implies X^2 \leq 11X - 10 $$
+    </div>
+
+    <p><strong>Step 2: Bounding the Variance and Standard Deviation</strong></p>
+    <p>Taking the expectation on both sides of the inequality, and using the linearity of expectation, we get:</p>
+    <div class="math-display">
+        $$ \mathbb{E}(X^2) \leq 11\mathbb{E}(X) - 10 $$
+    </div>
+    <p>We are given that $\mathbb{E}(X) = 2.8$. Substituting this value into our inequality:</p>
+    <div class="math-display">
+        $$ \mathbb{E}(X^2) \leq 11(2.8) - 10 = 30.8 - 10 = 20.8 $$
+    </div>
+    <p>Now, we calculate the maximum possible variance of $X$ using the standard variance formula $\text{Var}(X) = \mathbb{E}(X^2) - [\mathbb{E}(X)]^2$:</p>
+    <div class="math-display">
+        $$ \text{Var}(X) \leq 20.8 - (2.8)^2 = 20.8 - 7.84 = 12.96 $$
+    </div>
+    <p>The standard deviation $\sigma_X$ is the square root of the variance. Since variance is bounded by $12.96$:</p>
+    <div class="math-display">
+        $$ \sigma_X \leq \sqrt{12.96} = 3.6 $$
+    </div>
+    <p>This completes the proof for part (a).</p>
+
+    <hr style="border: 0; border-top: 1px dashed #e2e8f0; margin: 30px 0;">
+
+    <p><strong>Step 3: Separating the Expectation for Part (b)</strong></p>
+    <p>We are given two independent and identically distributed (i.i.d.) random variables, $X_1$ and $X_2$, both distributed as $X$. We need to evaluate the expectation of their ratio.</p>
+    <p>Because $X_1$ and $X_2$ are independent, any function of $X_1$ is independent of any function of $X_2$. Therefore, the expectation of their product can be factored:</p>
+    <div class="math-display">
+        $$ \mathbb{E}\left(\frac{X_1}{X_2}\right) = \mathbb{E}\left(X_1 \cdot \frac{1}{X_2}\right) = \mathbb{E}(X_1) \cdot \mathbb{E}\left(\frac{1}{X_2}\right) $$
+    </div>
+    <p>Since $X_1$ and $X_2$ are identically distributed, $\mathbb{E}(X_1) = \mathbb{E}(X_2) = \mathbb{E}(X)$. The equation simplifies to:</p>
+    <div class="math-display">
+        $$ \mathbb{E}\left(\frac{X_1}{X_2}\right) = \mathbb{E}(X) \cdot \mathbb{E}\left(\frac{1}{X}\right) $$
+    </div>
+
+    <p><strong>Step 4: Applying Jensen's Inequality</strong></p>
+    <p>Consider the function $g(x) = \frac{1}{x}$. We evaluate its convexity on the support of $X$, which is $[1, 10]$ (hence $x > 0$).</p>
+    <p>The second derivative of $g(x)$ is $g''(x) = \frac{2}{x^3}$. For all $x \in [1, 10]$, $g''(x) > 0$. Since the second derivative is strictly positive, $g(x) = \frac{1}{x}$ is a <strong>strictly convex function</strong> on the interval.</p>
+    <p>By <strong>Jensen's Inequality</strong>, for any convex function $g$ and random variable $X$:</p>
+    <div class="math-display">
+        $$ \mathbb{E}[g(X)] \geq g(\mathbb{E}[X]) $$
+    </div>
+    <p>Applying this to our specific function $g(x) = 1/x$:</p>
+    <div class="math-display">
+        $$ \mathbb{E}\left(\frac{1}{X}\right) \geq \frac{1}{\mathbb{E}(X)} $$
+    </div>
+    <p>Substitute this lower bound back into our factored expectation from Step 3:</p>
+    <div class="math-display">
+        $$ \mathbb{E}\left(\frac{X_1}{X_2}\right) = \mathbb{E}(X) \cdot \mathbb{E}\left(\frac{1}{X}\right) \geq \mathbb{E}(X) \cdot \left(\frac{1}{\mathbb{E}(X)}\right) = 1 $$
+    </div>
+
+    <div class="conclusion-box">
+        <strong>Final Answer / Q.E.D:</strong> <br>
+        (a) We have successfully shown that $\text{Var}(X) \leq 12.96$, meaning the standard deviation cannot exceed $3.6$.<br>
+        (b) Using Jensen's inequality and independence, we have shown that $\mathbb{E}\left(\frac{X_1}{X_2}\right) \geq 1$, meaning it cannot be smaller than $1$.
+    </div>
+</div>
+
+
+
+
+<div class="question-section" id="q6"\>
+<h2\>📌 Q6 Conditional Distributions and Bivariate Normality (12 Marks)\</h2\>
+
+<div style="background-color: #f8fafc; padding: 15px; border-left: 4px solid #4a5568; margin-bottom: 20px; border-radius: 4px;">
+    <strong>Problem Statement:</strong> Consider three random variables $X$, $Y$, and $Z$ where $Z \sim U(0,1)$, and for any given value $z$ of $Z$, the other two variables $X$ and $Y$ are independent and identically distributed as $N(z, 1)$.
+    <br><br>
+    (a) Verify whether $X$ and $Y$ are independent.<br>
+    (b) Does $(X,Y)$ follow a bivariate normal distribution? Justify your answer.
+</div>
+
+<h3>🧠 Approach &amp; Key Concepts</h3>
+<p>This problem explores the relationship between <strong>conditional independence</strong> and <strong>marginal independence</strong>, as well as the strict properties required for a <strong>Bivariate Normal Distribution</strong>. 
+<ul>
+    <li><strong>For part (a):</strong> Two variables can be conditionally independent given $Z$, but marginally dependent if they both share the latent factor $Z$. We will use the <strong>Law of Total Covariance</strong> to show that their marginal covariance is non-zero, disproving independence.</li>
+    <li><strong>For part (b):</strong> A fundamental property of the Bivariate Normal distribution is that its marginal distributions must also be strictly univariate Normal. We will compute the <strong>Moment Generating Function (MGF)</strong> of the marginal distribution of $X$ to show it is a mixture, not a pure Normal distribution.</li>
+</ul>
+</p>
+
+<h3>✍️ Step-by-Step Proof / Derivation</h3>
+
+<p><strong>Step 1: Setting up the Conditional Distributions for Part (a)</strong></p>
+<p>We are given the latent variable $Z \sim U(0,1)$. Thus, its expectation and variance are:</p>
+<div class="math-display">
+    $$ \mathbb{E}[Z] = \frac{1}{2}, \quad \text{Var}(Z) = \frac{1}{12} $$
+</div>
+<p>We are also given that conditional on $Z=z$, $X$ and $Y$ are independent and identically distributed (i.i.d.) as $N(z, 1)$. This implies:</p>
+<div class="math-display">
+    $$ \mathbb{E}[X|Z] = Z, \quad \mathbb{E}[Y|Z] = Z $$
+</div>
+<div class="math-display">
+    $$ \text{Var}(X|Z) = 1, \quad \text{Var}(Y|Z) = 1 $$
+</div>
+<p>Furthermore, because $X$ and $Y$ are conditionally independent given $Z$, their conditional covariance is zero:</p>
+<div class="math-display">
+    $$ \text{Cov}(X, Y | Z) = 0 $$
+</div>
+
+<p><strong>Step 2: Evaluating Marginal Independence via the Law of Total Covariance</strong></p>
+<p>To determine if $X$ and $Y$ are independent, we evaluate their marginal covariance. If they are independent, their covariance must be exactly $0$. We apply the <strong>Law of Total Covariance</strong>:</p>
+<div class="math-display">
+    $$ \text{Cov}(X, Y) = \mathbb{E}[\text{Cov}(X, Y | Z)] + \text{Cov}(\mathbb{E}[X|Z], \mathbb{E}[Y|Z]) $$
+</div>
+<p>Substitute the conditional expectations and covariance we established in Step 1:</p>
+<div class="math-display">
+    $$ \text{Cov}(X, Y) = \mathbb{E}[0] + \text{Cov}(Z, Z) $$
+</div>
+<p>The covariance of a variable with itself is simply its variance:</p>
+<div class="math-display">
+    $$ \text{Cov}(X, Y) = \text{Var}(Z) = \frac{1}{12} $$
+</div>
+<p>Since $\text{Cov}(X, Y) = 1/12 \neq 0$, the random variables $X$ and $Y$ are <strong>not marginally independent</strong>.</p>
+
+<hr style="border: 0; border-top: 1px dashed #e2e8f0; margin: 30px 0;">
+
+<p><strong>Step 3: Testing for Bivariate Normality for Part (b)</strong></p>
+<p>If the joint distribution $(X,Y)$ follows a bivariate normal distribution, then a necessary (though not sufficient on its own) condition is that the marginal distributions of $X$ and $Y$ must be univariate normal distributions. Let us find the marginal distribution of $X$ using its <strong>Moment Generating Function (MGF)</strong>, $M_X(t)$.</p>
+<p>By the Law of Iterated Expectations, the marginal MGF is the expected value of the conditional MGF:</p>
+<div class="math-display">
+    $$ M_X(t) = \mathbb{E}[e^{tX}] = \mathbb{E}_Z[\mathbb{E}[e^{tX} | Z]] $$
+</div>
+<p>Conditional on $Z$, $X \sim N(Z, 1)$. The MGF of a Normal distribution $N(\mu, \sigma^2)$ is $e^{\mu t + \frac{1}{2}\sigma^2 t^2}$. Substituting $\mu = Z$ and $\sigma^2 = 1$:</p>
+<div class="math-display">
+    $$ \mathbb{E}[e^{tX} | Z] = \exp\left(Zt + \frac{1}{2}t^2\right) $$
+</div>
+<p>Now, we take the expectation over the uniform distribution of $Z$:</p>
+<div class="math-display">
+    $$ M_X(t) = \mathbb{E}_Z\left[ e^{Zt + \frac{1}{2}t^2} \right] = e^{\frac{1}{2}t^2} \mathbb{E}_Z[e^{tZ}] $$
+</div>
+
+<p><strong>Step 4: Evaluating the MGF of Z</strong></p>
+<p>Since $Z \sim U(0,1)$, its MGF is given by the integral:</p>
+<div class="math-display">
+    $$ \mathbb{E}_Z[e^{tZ}] = \int_{0}^{1} e^{tz} \cdot 1 \, dz = \left[ \frac{e^{tz}}{t} \right]_0^1 = \frac{e^t - 1}{t} $$
+</div>
+<p>Substituting this back into the marginal MGF for $X$ gives:</p>
+<div class="math-display">
+    $$ M_X(t) = e^{\frac{1}{2}t^2} \left( \frac{e^t - 1}{t} \right) $$
+</div>
+<p>The MGF of a normal distribution must be strictly of the form $\exp(\mu t + \frac{1}{2}\sigma^2 t^2)$. Because of the additional $\frac{e^t - 1}{t}$ term, $M_X(t)$ is clearly not the MGF of a normal distribution. Therefore, the marginal distribution of $X$ is not normal (it is a continuous mixture of normals).</p>
+
+<div class="conclusion-box">
+    <strong>Final Answer / Q.E.D:</strong> <br>
+    (a) $X$ and $Y$ are <strong>not independent</strong>, as their marginal covariance is $1/12 \neq 0$.<br>
+    (b) $(X,Y)$ <strong>does not</strong> follow a bivariate normal distribution, justified by the fact that the marginal distribution of $X$ is a mixture distribution whose MGF does not match that of a normal distribution.
+</div>
+
+
+</div>
+
+
+
+
+
+
+
+
+<div class="question-section" id="q7"\>
+<h2\>📌 Q7 Bivariate Normal: Sufficiency and Ancillarity (12 Marks)</h2\>
+
+
+<h3>🧠 Approach &amp; Key Concepts</h3>
+<p>This problem assesses your mastery of statistical inference, specifically data reduction techniques using <strong>Sufficient</strong> and <strong>Ancillary</strong> statistics. 
+<ul>
+    <li><strong>For part (a):</strong> To find the <strong>minimal sufficient statistic</strong>, we will construct the joint likelihood function and apply the <strong>Lehmann-Scheffé Theorem</strong> (also known as the ratio test for minimal sufficiency). By examining the ratio of likelihoods for two sample points, we will identify the coarsest partition of the sample space that makes the ratio parameter-free.</li>
+    <li><strong>For part (b):</strong> A statistic is <strong>ancillary</strong> if its probability distribution does not depend on the parameter $\theta$. We will evaluate the marginal distribution of $Q_1$ to test for individual ancillarity. For the joint statistic $Q = (Q_1, Q_2)$, we will derive the cross-moment $\mathbb{E}[Q_1 Q_2]$ to demonstrate that their joint distribution structurally depends on the correlation parameter $\theta$.</li>
+</ul>
+</p>
+
+<h3>✍️ Step-by-Step Proof / Derivation</h3>
+
+<p><strong>Step 1: Constructing the Joint Likelihood Function for Part (a)</strong></p>
+<p>We are given a random sample $(X_1, Y_1), \dots, (X_n, Y_n)$ from a bivariate normal distribution with means $\mu_X = \mu_Y = 0$, variances $\sigma_X^2 = \sigma_Y^2 = 1$, and correlation $\rho = \theta$. The joint density (likelihood function) $L(\theta)$ is the product of the marginal densities:</p>
+<div class="math-display">
+    $$ L(\theta | \mathbf{x}, \mathbf{y}) = \prod_{i=1}^n \frac{1}{2\pi\sqrt{1-\theta^2}} \exp\left\{ -\frac{1}{2(1-\theta^2)} (x_i^2 + y_i^2 - 2\theta x_i y_i) \right\} $$
+</div>
+<p>Simplifying this by bringing the product into the exponent as a sum yields:</p>
+<div class="math-display">
+    $$ L(\theta | \mathbf{x}, \mathbf{y}) = \left( \frac{1}{2\pi\sqrt{1-\theta^2}} \right)^n \exp\left\{ -\frac{1}{2(1-\theta^2)} \sum_{i=1}^n (x_i^2 + y_i^2) + \frac{\theta}{1-\theta^2} \sum_{i=1}^n x_i y_i \right\} $$
+</div>
+
+<p><strong>Step 2: Applying the Lehmann-Scheffé Theorem</strong></p>
+<p>Let $(\mathbf{x}, \mathbf{y})$ and $(\mathbf{x}', \mathbf{y}')$ be two distinct sample points. We construct the likelihood ratio:</p>
+<div class="math-display">
+    $$ \frac{L(\theta | \mathbf{x}, \mathbf{y})}{L(\theta | \mathbf{x}', \mathbf{y}')} = \exp\left\{ -\frac{1}{2(1-\theta^2)} \left[ \sum_{i=1}^n (x_i^2 + y_i^2) - \sum_{i=1}^n (x_i'^2 + y_i'^2) \right] + \frac{\theta}{1-\theta^2} \left[ \sum_{i=1}^n x_i y_i - \sum_{i=1}^n x_i' y_i' \right] \right\} $$
+</div>
+<p>For this ratio to be independent of the parameter $\theta$ for all $\theta \in (-1, 1)$, the terms multiplied by the functionally independent parameter components, namely $-\frac{1}{2(1-\theta^2)}$ and $\frac{\theta}{1-\theta^2}$, must perfectly vanish. This requires:</p>
+<div class="math-display">
+    $$ \sum_{i=1}^n (x_i^2 + y_i^2) = \sum_{i=1}^n (x_i'^2 + y_i'^2) \quad \text{and} \quad \sum_{i=1}^n x_i y_i = \sum_{i=1}^n x_i' y_i' $$
+</div>
+<p>By the Lehmann-Scheffé theorem, the minimal sufficient statistic is the vector $T$ that defines this equivalence class:</p>
+<div class="math-display">
+    $$ T(\mathbf{X}, \mathbf{Y}) = \left( \sum_{i=1}^n (X_i^2 + Y_i^2), \sum_{i=1}^n X_i Y_i \right) $$
+</div>
+
+<hr style="border: 0; border-top: 1px dashed #e2e8f0; margin: 30px 0;">
+
+<p><strong>Step 3: Evaluating Ancillarity of $Q_1$ for Part (b)</strong></p>
+<p>A statistic is ancillary if its distribution does not depend on $\theta$. Let's examine $Q_1 = \sum_{i=1}^n X_i^2$.</p>
+<p>From the joint bivariate normal density $f_\theta(x, y)$, integrating out $y$ gives the marginal distribution of $X$. Since $\mu_X = 0$ and $\sigma_X^2 = 1$, the marginal distribution is standard normal:</p>
+<div class="math-display">
+    $$ X_i \sim N(0, 1) $$
+</div>
+<p>Because the $X_i$ are independent standard normal variables, the sum of their squares follows a Chi-square distribution with $n$ degrees of freedom:</p>
+<div class="math-display">
+    $$ Q_1 = \sum_{i=1}^n X_i^2 \sim \chi^2_{(n)} $$
+</div>
+<p>Since the $\chi^2_{(n)}$ distribution has no dependence on $\theta$, we conclude that $Q_1$ is strictly <strong>ancillary</strong> for $\theta$.</p>
+
+<p><strong>Step 4: Evaluating Ancillarity of the Joint Statistic $Q = (Q_1, Q_2)$</strong></p>
+<p>By symmetry, the marginal distribution of $Y_i$ is also $N(0,1)$, meaning $Q_2 = \sum_{i=1}^n Y_i^2 \sim \chi^2_{(n)}$. Thus, $Q_2$ is individually ancillary. However, for the joint vector $Q = (Q_1, Q_2)$ to be ancillary, its <em>joint</em> distribution must be independent of $\theta$.</p>
+<p>To check this, let us evaluate the covariance between $Q_1$ and $Q_2$:</p>
+<div class="math-display">
+    $$ \text{Cov}(Q_1, Q_2) = \text{Cov}\left(\sum_{i=1}^n X_i^2, \sum_{j=1}^n Y_j^2\right) = \sum_{i=1}^n \text{Cov}(X_i^2, Y_i^2) $$
+</div>
+<p>We compute $\text{Cov}(X_i^2, Y_i^2) = \mathbb{E}[X_i^2 Y_i^2] - \mathbb{E}[X_i^2]\mathbb{E}[Y_i^2]$. Since $X_i, Y_i \sim N(0,1)$, we know $\mathbb{E}[X_i^2] = 1$ and $\mathbb{E}[Y_i^2] = 1$.</p>
+<p>Using the properties of conditional expectation for bivariate normals, $Y_i | X_i \sim N(\theta X_i, 1-\theta^2)$:</p>
+<div class="math-display">
+    $$ \mathbb{E}[X_i^2 Y_i^2] = \mathbb{E}_{X}\left[X_i^2 \mathbb{E}[Y_i^2 | X_i]\right] = \mathbb{E}_{X}\left[X_i^2 (\text{Var}(Y_i|X_i) + (\mathbb{E}[Y_i|X_i])^2)\right] $$
+</div>
+<div class="math-display">
+    $$ \mathbb{E}[X_i^2 Y_i^2] = \mathbb{E}_{X}\left[X_i^2 (1 - \theta^2 + \theta^2 X_i^2)\right] = (1-\theta^2)\mathbb{E}[X_i^2] + \theta^2\mathbb{E}[X_i^4] $$
+</div>
+<p>Recall that the 4th moment of a standard normal is $3$. Thus:</p>
+<div class="math-display">
+    $$ \mathbb{E}[X_i^2 Y_i^2] = (1-\theta^2)(1) + \theta^2(3) = 1 + 2\theta^2 $$
+</div>
+<p>Returning to the covariance:</p>
+<div class="math-display">
+    $$ \text{Cov}(X_i^2, Y_i^2) = (1 + 2\theta^2) - (1)(1) = 2\theta^2 \implies \text{Cov}(Q_1, Q_2) = 2n\theta^2 $$
+</div>
+<p>Because the covariance of $Q_1$ and $Q_2$ is a direct function of $\theta$, their joint distribution fundamentally depends on $\theta$. Therefore, the vector $Q$ cannot be ancillary.</p>
+
+<div class="conclusion-box">
+    <strong>Final Answer / Q.E.D:</strong><br>
+    (a) The minimal sufficient statistic for $\theta$ is $T = \left( \sum_{i=1}^n (X_i^2 + Y_i^2), \sum_{i=1}^n X_i Y_i \right)$.<br>
+    (b) (i) $Q_1$ <strong>is ancillary</strong> for $\theta$ because its marginal distribution is $\chi^2_{(n)}$, which is independent of $\theta$.<br>
+    (b) (ii) $Q = (Q_1, Q_2)$ <strong>is not ancillary</strong> for $\theta$ because their joint distribution depends on $\theta$ (proven by $\text{Cov}(Q_1, Q_2) = 2n\theta^2$).
+</div>
+
+</div>
+
+
+
+<div class="question-section" id="q8">
+    <h2>📌 Q8 Hypothesis Testing with Geometric Constraints (12 Marks)</h2>
+
+    <div style="background-color: #f8fafc; padding: 15px; border-left: 4px solid #4a5568; margin-bottom: 20px; border-radius: 4px;">
+        <strong>Problem Statement:</strong> Let $\theta_1, \theta_2, \theta_3$ be the true angles of a huge triangular field. Suppose that each of these angles is measured by a separate person subject to an additive error. Assume that these three errors are independently distributed as $N(0, \sigma^2)$ where $\sigma^2$ is unknown. Let these measurements be $Y_1, Y_2, Y_3$, respectively. Construct a test of level $\alpha$ ($0 < \alpha < 1$) for testing $H_0 : \theta_1 = \theta_2$ against $H_1 : \theta_1 \neq \theta_2$.
+    </div>
+
+    <h3>🧠 Approach &amp; Key Concepts</h3>
+    <p>This problem falls under the framework of <strong>Linear Models with Constraints</strong>. The fundamental constraint is geometric: the sum of the true angles of a planar triangle is exactly $180^\circ$ (or $\pi$ radians). The strategy involves:</p>
+    <ul>
+        <li>Defining a suitable unbiased estimator for the difference $\theta_1 - \theta_2$.</li>
+        <li>Finding an independent estimator for the unknown error variance $\sigma^2$ using the geometric constraint $\sum \theta_i = \pi$.</li>
+        <li>Constructing a <strong>Student's t-statistic</strong> (or equivalent F-statistic) by taking the ratio of the standard normal variable to the square root of the normalized chi-square variable.</li>
+    </ul>
+
+    <h3>✍️ Step-by-Step Proof / Derivation</h3>
+    
+    <p><strong>Step 1: Formulating the Model and the Constraint</strong></p>
+    <p>We are given that the measurements $Y_i$ are subject to independent $N(0, \sigma^2)$ errors. Thus, the measurement model is:</p>
+    <div class="math-display">
+        $$ Y_i \sim N(\theta_i, \sigma^2), \quad i = 1, 2, 3 $$
+    </div>
+    <p>Since the angles belong to a triangle, their true sum is a known constant. Let $S = 180^\circ$ (or $\pi$). Thus, we have the deterministic constraint:</p>
+    <div class="math-display">
+        $$ \theta_1 + \theta_2 + \theta_3 = S $$
+    </div>
+
+    <p><strong>Step 2: Constructing the Test Statistic Numerator</strong></p>
+    <p>We are testing $H_0: \theta_1 - \theta_2 = 0$. A natural, unbiased estimator for $\theta_1 - \theta_2$ is the difference in their measurements. Let $U = Y_1 - Y_2$. By the properties of normal combinations:</p>
+    <div class="math-display">
+        $$ \mathbb{E}[U] = \theta_1 - \theta_2 $$
+    </div>
+    <div class="math-display">
+        $$ \text{Var}(U) = \text{Var}(Y_1) + \text{Var}(Y_2) = 2\sigma^2 $$
+    </div>
+    <p>Under the null hypothesis $H_0$, $U \sim N(0, 2\sigma^2)$. Standardizing this gives us a standard normal variable:</p>
+    <div class="math-display">
+        $$ Z = \frac{Y_1 - Y_2}{\sqrt{2}\sigma} \sim N(0, 1) $$
+    </div>
+
+    <p><strong>Step 3: Estimating the Unknown Variance $\sigma^2$</strong></p>
+    <p>Because $\sigma^2$ is unknown, we need to estimate it using the remaining degrees of freedom. Consider the sum of the measurements, $V = Y_1 + Y_2 + Y_3$.</p>
+    <div class="math-display">
+        $$ \mathbb{E}[V] = \theta_1 + \theta_2 + \theta_3 = S $$
+    </div>
+    <div class="math-display">
+        $$ \text{Var}(V) = \text{Var}(Y_1) + \text{Var}(Y_2) + \text{Var}(Y_3) = 3\sigma^2 $$
+    </div>
+    <p>Thus, $V \sim N(S, 3\sigma^2)$. We can construct a $\chi^2$ random variable with 1 degree of freedom:</p>
+    <div class="math-display">
+        $$ X = \frac{(V - S)^2}{3\sigma^2} = \frac{(Y_1 + Y_2 + Y_3 - S)^2}{3\sigma^2} \sim \chi^2_{(1)} $$
+    </div>
+
+    <p><strong>Step 4: Proving Independence of $U$ and $V$</strong></p>
+    <p>For the t-statistic to be valid, the numerator ($Z$) and the denominator (function of $X$) must be independent. Since they are linear combinations of jointly normal variables, we only need to show their covariance is zero:</p>
+    <div class="math-display">
+        $$ \text{Cov}(U, V) = \text{Cov}(Y_1 - Y_2, Y_1 + Y_2 + Y_3) = \text{Var}(Y_1) - \text{Var}(Y_2) = \sigma^2 - \sigma^2 = 0 $$
+    </div>
+    <p>Since $\text{Cov}(U, V) = 0$, $U$ and $V$ are strictly independent. Consequently, $Z$ and $X$ are independent.</p>
+
+    <p><strong>Step 5: Constructing the Final t-Test</strong></p>
+    <p>We define the test statistic $T$ as the ratio of the standard normal variable $Z$ to the square root of the chi-square variable $X$ divided by its degrees of freedom ($\nu = 1$):</p>
+    <div class="math-display">
+        $$ T = \frac{Z}{\sqrt{X / 1}} = \frac{\frac{Y_1 - Y_2}{\sqrt{2}\sigma}}{\sqrt{\frac{(Y_1 + Y_2 + Y_3 - S)^2}{3\sigma^2}}} $$
+    </div>
+    <p>The unknown parameter $\sigma$ perfectly cancels out, leaving a completely computable statistic:</p>
+    <div class="math-display">
+        $$ T = \sqrt{\frac{3}{2}} \frac{Y_1 - Y_2}{|Y_1 + Y_2 + Y_3 - S|} $$
+    </div>
+    <p>Under $H_0$, this statistic $T$ follows a Student's t-distribution with $1$ degree of freedom (which is equivalent to a standard Cauchy distribution).</p>
+
+    <div class="conclusion-box">
+        <strong>Final Answer / Q.E.D:</strong><br>
+        The required level $\alpha$ test rejects the null hypothesis $H_0 : \theta_1 = \theta_2$ in favor of $H_1 : \theta_1 \neq \theta_2$ if the observed test statistic falls in the critical region:
+        $$ |T| > t_{1, \alpha/2} $$
+        where $T = \sqrt{\frac{3}{2}} \frac{Y_1 - Y_2}{|Y_1 + Y_2 + Y_3 - 180^\circ|}$ and $t_{1, \alpha/2}$ is the upper $\alpha/2$ critical value of the Student's t-distribution with 1 degree of freedom.
+    </div>
+</div>
+
+<div class="question-section" id="q9">
+    <h2>📌 Q9 Most Powerful Test and Neyman-Pearson Lemma (12 Marks)</h2>
+
+    <div style="background-color: #f8fafc; padding: 15px; border-left: 4px solid #4a5568; margin-bottom: 20px; border-radius: 4px;">
+        <strong>Problem Statement:</strong> Suppose $X_1, X_2, \dots, X_n$ are independent random variables with the pdf $f_\theta(x) = 2e^{-2(x-\theta)} \mathbb{I}\{x \geq \theta\}$. Let $\theta_0$ and $\theta_1$ be known real numbers with $\theta_1 > \theta_0$. For a prefixed $\alpha \in (0,1)$, derive a randomized most powerful test of size $\alpha$ for testing $H_0 : \theta = \theta_0$ against $H_1 : \theta = \theta_1$ when (a) $e^{2n(\theta_0-\theta_1)} < \alpha$ and (b) $e^{2n(\theta_0-\theta_1)} > \alpha$.
+    </div>
+
+    <h3>🧠 Approach &amp; Key Concepts</h3>
+    <p>This problem asks for the Most Powerful (MP) test for a simple null versus a simple alternative hypothesis. We will use the <strong>Neyman-Pearson Lemma (NPL)</strong>. The key steps are to find the joint likelihood function, identify the sufficient statistic (which will be the first order statistic $X_{(1)}$ due to the indicator function), formulate the Likelihood Ratio $\Lambda$, and determine the critical region based on the size $\alpha$. Because the support of the distribution depends on the parameter $\theta$, the likelihood ratio will be piecewise, leading to different randomized test structures depending on the condition $e^{2n(\theta_0 - \theta_1)} \lessgtr \alpha$.</p>
+
+    <h3>✍️ Step-by-Step Proof / Derivation</h3>
+    
+    <p><strong>Step 1: Likelihood Function and Sufficient Statistic</strong></p>
+    <p>The joint probability density function (likelihood) of the sample is:</p>
+    <div class="math-display">
+        $$ L(\theta | \mathbf{x}) = \prod_{i=1}^n 2e^{-2(x_i - \theta)} \mathbb{I}\{x_i \geq \theta\} = 2^n \exp\left(-2\sum_{i=1}^n x_i + 2n\theta\right) \mathbb{I}\{X_{(1)} \geq \theta\} $$
+    </div>
+    <p>where $X_{(1)} = \min(X_1, \dots, X_n)$. By the Factorization Theorem, $X_{(1)}$ is a minimal sufficient statistic for $\theta$. We must find the distribution of $X_{(1)}$ under $H_0$ to evaluate probabilities. For $y \geq \theta_0$:</p>
+    <div class="math-display">
+        $$ P_{\theta_0}(X_{(1)} \geq y) = \prod_{i=1}^n P_{\theta_0}(X_i \geq y) = \left[ \int_y^\infty 2e^{-2(x-\theta_0)} dx \right]^n = \left[ e^{-2(y-\theta_0)} \right]^n = e^{-2n(y-\theta_0)} $$
+    </div>
+
+    <p><strong>Step 2: Constructing the Likelihood Ratio ($\Lambda$)</strong></p>
+    <p>We are testing $H_0: \theta = \theta_0$ against $H_1: \theta = \theta_1$ (with $\theta_1 > \theta_0$). The likelihood ratio is:</p>
+    <div class="math-display">
+        $$ \Lambda(X_{(1)}) = \frac{L(\theta_1)}{L(\theta_0)} = \frac{e^{2n\theta_1} \mathbb{I}\{X_{(1)} \geq \theta_1\}}{e^{2n\theta_0} \mathbb{I}\{X_{(1)} \geq \theta_0\}} $$
+    </div>
+    <p>Since $\theta_1 > \theta_0$, we analyze $\Lambda$ piecewise over the support of $H_0$ ($X_{(1)} \geq \theta_0$):</p>
+    <ul>
+        <li>If $\theta_0 \leq X_{(1)} < \theta_1$, the numerator is $0$, so $\Lambda = 0$.</li>
+        <li>If $X_{(1)} \geq \theta_1$, both indicators are $1$, so $\Lambda = e^{2n(\theta_1 - \theta_0)} = k^*$.</li>
+    </ul>
+    <p>By the <strong>Neyman-Pearson Lemma</strong>, the Most Powerful test function $\phi(X_{(1)})$ has the form:</p>
+    <div class="math-display">
+        $$ \phi(x) = \begin{cases} 1 & \text{if } \Lambda > c \\ \gamma & \text{if } \Lambda = c \\ 0 & \text{if } \Lambda < c \end{cases} $$
+    </div>
+    <p>where $c$ and $\gamma$ are chosen such that $\mathbb{E}_{\theta_0}[\phi(X_{(1)})] = \alpha$. Note that $P_{\theta_0}(\Lambda = k^*) = P_{\theta_0}(X_{(1)} \geq \theta_1) = e^{-2n(\theta_1 - \theta_0)} = e^{2n(\theta_0 - \theta_1)}$.</p>
+
+    <hr style="border: 0; border-top: 1px dashed #e2e8f0; margin: 30px 0;">
+
+    <p><strong>Step 3: Deriving the Test for Case (a) $e^{2n(\theta_0 - \theta_1)} < \alpha$</strong></p>
+    <p>In this case, the probability of obtaining the maximum likelihood ratio $k^*$ under $H_0$ is strictly less than the allowed size $\alpha$:</p>
+    <div class="math-display">
+        $$ P_{\theta_0}(\Lambda = k^*) = e^{2n(\theta_0 - \theta_1)} < \alpha $$
+    </div>
+    <p>If we set the threshold $c = k^*$, our test size would be too small. Therefore, we must lower the threshold to $c = 0$. The test rule becomes:</p>
+    <ul>
+        <li>Reject $H_0$ with probability $1$ if $\Lambda > 0$ (i.e., $X_{(1)} \geq \theta_1$).</li>
+        <li>Reject $H_0$ with probability $\gamma_1$ if $\Lambda = 0$ (i.e., $\theta_0 \leq X_{(1)} < \theta_1$).</li>
+    </ul>
+    <p>We solve for $\gamma_1$ using the size constraint:</p>
+    <div class="math-display">
+        $$ \mathbb{E}_{\theta_0}[\phi] = 1 \cdot P_{\theta_0}(X_{(1)} \geq \theta_1) + \gamma_1 \cdot P_{\theta_0}(\theta_0 \leq X_{(1)} < \theta_1) = \alpha $$
+    </div>
+    <div class="math-display">
+        $$ e^{2n(\theta_0 - \theta_1)} + \gamma_1 \left( 1 - e^{2n(\theta_0 - \theta_1)} \right) = \alpha $$
+    </div>
+    <div class="math-display">
+        $$ \gamma_1 = \frac{\alpha - e^{2n(\theta_0 - \theta_1)}}{1 - e^{2n(\theta_0 - \theta_1)}} $$
+    </div>
+
+    <p><strong>Step 4: Deriving the Test for Case (b) $e^{2n(\theta_0 - \theta_1)} > \alpha$</strong></p>
+    <p>In this case, the probability of obtaining the maximum likelihood ratio $k^*$ under $H_0$ exceeds $\alpha$:</p>
+    <div class="math-display">
+        $$ P_{\theta_0}(\Lambda = k^*) = e^{2n(\theta_0 - \theta_1)} > \alpha $$
+    </div>
+    <p>If we always rejected $H_0$ when $X_{(1)} \geq \theta_1$, the Type I error would exceed $\alpha$. Thus, we must set $c = k^* = e^{2n(\theta_1 - \theta_0)}$ and introduce randomization at this boundary. The test rule becomes:</p>
+    <ul>
+        <li>Reject $H_0$ with probability $\gamma_2$ if $\Lambda = k^*$ (i.e., $X_{(1)} \geq \theta_1$).</li>
+        <li>Reject $H_0$ with probability $0$ if $\Lambda < k^*$ (i.e., $\theta_0 \leq X_{(1)} < \theta_1$).</li>
+    </ul>
+    <p>We solve for $\gamma_2$ using the size constraint:</p>
+    <div class="math-display">
+        $$ \mathbb{E}_{\theta_0}[\phi] = \gamma_2 \cdot P_{\theta_0}(X_{(1)} \geq \theta_1) = \alpha $$
+    </div>
+    <div class="math-display">
+        $$ \gamma_2 \cdot e^{2n(\theta_0 - \theta_1)} = \alpha \implies \gamma_2 = \alpha e^{2n(\theta_1 - \theta_0)} $$
+    </div>
+
+    <div class="conclusion-box">
+        <strong>Final Answer / Q.E.D:</strong><br>
+        The randomized Most Powerful test function $\phi(X_{(1)})$ of size $\alpha$ is given by:<br><br>
+        <strong>For Case (a) $e^{2n(\theta_0-\theta_1)} < \alpha$:</strong>
+        $$ \phi(X_{(1)}) = \begin{cases} 1 & \text{if } X_{(1)} \geq \theta_1 \\ \frac{\alpha - e^{2n(\theta_0 - \theta_1)}}{1 - e^{2n(\theta_0 - \theta_1)}} & \text{if } \theta_0 \leq X_{(1)} < \theta_1 \end{cases} $$
+        <br>
+        <strong>For Case (b) $e^{2n(\theta_0-\theta_1)} > \alpha$:</strong>
+        $$ \phi(X_{(1)}) = \begin{cases} \alpha e^{2n(\theta_1 - \theta_0)} & \text{if } X_{(1)} \geq \theta_1 \\ 0 & \text{if } \theta_0 \leq X_{(1)} < \theta_1 \end{cases} $$
+    </div>
+</div>
+
+
+
+<div class="question-section" id="q10">
+    <h2>📌 Q10 Multivariate Normal Distribution (12 Marks)</h2>
+
+    <div style="background-color: #f8fafc; padding: 15px; border-left: 4px solid #4a5568; margin-bottom: 20px; border-radius: 4px;">
+        <strong>Problem Statement:</strong> Suppose $(X_1, X_2, X_3, X_4)$ follows a multivariate normal distribution with mean $(0,0,0,0)$ and the dispersion matrix:
+        $$ \boldsymbol{\Sigma} = \begin{pmatrix} 25 & 0 & 0 & 1 \\ 0 & 16 & 4 & 0 \\ 0 & 4 & 9 & 0 \\ 1 & 0 & 0 & 4 \end{pmatrix} $$
+        (a) Find $\mathbb{P}(X_1 > X_2 X_3 X_4)$.<br>
+        (b) Compute the multiple correlation coefficient of $X_1$ with $(X_2, X_3, X_4)$.<br>
+        (c) Compute the partial correlation coefficient between $X_2$ and $X_3$ given $(X_1, X_4)$.
+    </div>
+
+    <h3>🧠 Approach &amp; Key Concepts</h3>
+    <p>This problem evaluates your structural understanding of the <strong>Multivariate Normal Distribution</strong>.
+    <ul>
+        <li><strong>For part (a):</strong> Direct integration is impossible. Instead, we exploit the symmetry of the multivariate normal distribution. We look for a distribution-preserving transformation that flips the sign of the target expression, proving it is symmetric around $0$.</li>
+        <li><strong>For part (b):</strong> The <strong>Multiple Correlation Coefficient</strong> $R_{1 \cdot 234}$ measures the maximum correlation between $X_1$ and a linear combination of $(X_2, X_3, X_4)$. It is derived from partitioning the covariance matrix.</li>
+        <li><strong>For part (c):</strong> We compute the <strong>Partial Correlation Coefficient</strong> by finding the conditional covariance matrix. A critical property of the multivariate normal is that uncorrelated blocks are strictly independent.</li>
+    </ul>
+    </p>
+
+    <h3>✍️ Step-by-Step Proof / Derivation</h3>
+    
+    <p><strong>Step 1: Analyzing Independence and Symmetry for Part (a)</strong></p>
+    <p>Let $W = X_1 - X_2 X_3 X_4$. We want to find $\mathbb{P}(W > 0)$. Notice the zero entries in the covariance matrix $\boldsymbol{\Sigma}$:</p>
+    <ul>
+        <li>$\text{Cov}(X_1, X_2) = 0$, $\text{Cov}(X_1, X_3) = 0$</li>
+        <li>$\text{Cov}(X_4, X_2) = 0$, $\text{Cov}(X_4, X_3) = 0$</li>
+    </ul>
+    <p>Because the variables are jointly normal, zero covariance implies strict independence. Thus, the random vector $(X_1, X_4)$ is <strong>completely independent</strong> of the random vector $(X_2, X_3)$.</p>
+    <p>Furthermore, since the mean vector is $\mathbf{0}$, the distribution of $(X_1, X_4)$ is symmetric. Specifically, if we apply the transformation $(X_1, X_4) \mapsto (-X_1, -X_4)$, the mean remains $(0,0)$ and the covariance matrix remains unchanged because $\text{Cov}(-X_1, -X_4) = (-1)(-1)\text{Cov}(X_1, X_4) = 1$.</p>
+    <p>Therefore, $(-X_1, X_2, X_3, -X_4)$ has the exact same joint distribution as $(X_1, X_2, X_3, X_4)$.</p>
+
+    <p><strong>Step 2: Evaluating the Probability $\mathbb{P}(W > 0)$</strong></p>
+    <p>Let us apply this transformation to our variable $W$:</p>
+    <div class="math-display">
+        $$ W' = (-X_1) - X_2 X_3 (-X_4) = -X_1 + X_2 X_3 X_4 = -(X_1 - X_2 X_3 X_4) = -W $$
+    </div>
+    <p>Since the joint distribution is invariant under this transformation, $W$ and $-W$ are identically distributed ($W \stackrel{d}{=} -W$). This means the distribution of $W$ is perfectly symmetric around $0$.</p>
+    <p>Because $W$ is a continuous random variable (a polynomial of continuous normals), $\mathbb{P}(W = 0) = 0$. Therefore:</p>
+    <div class="math-display">
+        $$ \mathbb{P}(W > 0) = \mathbb{P}(W < 0) = \frac{1}{2} $$
+    </div>
+    <p>Thus, $\mathbb{P}(X_1 > X_2 X_3 X_4) = \mathbb{P}(X_1 - X_2 X_3 X_4 > 0) = 0.5$.</p>
+
+    <hr style="border: 0; border-top: 1px dashed #e2e8f0; margin: 30px 0;">
+
+    <p><strong>Step 3: Partitioning the Covariance Matrix for Part (b)</strong></p>
+    <p>The squared multiple correlation coefficient of $X_1$ with $\mathbf{X}_{-1} = (X_2, X_3, X_4)^\top$ is given by:</p>
+    <div class="math-display">
+        $$ R_{1 \cdot 234}^2 = \frac{\boldsymbol{\Sigma}_{1, -1} \boldsymbol{\Sigma}_{-1, -1}^{-1} \boldsymbol{\Sigma}_{-1, 1}}{\boldsymbol{\Sigma}_{11}} $$
+    </div>
+    <p>From the given $\boldsymbol{\Sigma}$, we extract the sub-matrices:</p>
+    <div class="math-display">
+        $$ \boldsymbol{\Sigma}_{11} = 25, \quad \boldsymbol{\Sigma}_{1, -1} = (0, 0, 1), \quad \boldsymbol{\Sigma}_{-1, -1} = \begin{pmatrix} 16 & 4 & 0 \\ 4 & 9 & 0 \\ 0 & 0 & 4 \end{pmatrix} $$
+    </div>
+
+    <p><strong>Step 4: Computing $R_{1 \cdot 234}$</strong></p>
+    <p>Notice that $\boldsymbol{\Sigma}_{-1, -1}$ is block-diagonal. The vector $\boldsymbol{\Sigma}_{1, -1}$ only has a non-zero entry in the 3rd position (corresponding to $X_4$). Therefore, we only need the bottom-right entry of the inverse matrix $\boldsymbol{\Sigma}_{-1, -1}^{-1}$, which is simply $1/4$.</p>
+    <div class="math-display">
+        $$ \boldsymbol{\Sigma}_{1, -1} \boldsymbol{\Sigma}_{-1, -1}^{-1} \boldsymbol{\Sigma}_{-1, 1} = (0, 0, 1) \begin{pmatrix} * & * & 0 \\ * & * & 0 \\ 0 & 0 & 1/4 \end{pmatrix} \begin{pmatrix} 0 \\ 0 \\ 1 \end{pmatrix} = 1 \times \frac{1}{4} \times 1 = \frac{1}{4} $$
+    </div>
+    <p>Now, divide by $\boldsymbol{\Sigma}_{11}$:</p>
+    <div class="math-display">
+        $$ R_{1 \cdot 234}^2 = \frac{1/4}{25} = \frac{1}{100} $$
+    </div>
+    <p>Taking the positive square root (since $R \geq 0$):</p>
+    <div class="math-display">
+        $$ R_{1 \cdot 234} = \frac{1}{10} = 0.1 $$
+    </div>
+
+    <hr style="border: 0; border-top: 1px dashed #e2e8f0; margin: 30px 0;">
+
+    <p><strong>Step 5: Computing the Partial Correlation for Part (c)</strong></p>
+    <p>We need the partial correlation $\rho_{23 \cdot 14}$, which is derived from the conditional covariance matrix of $(X_2, X_3)$ given $(X_1, X_4)$:</p>
+    <div class="math-display">
+        $$ \boldsymbol{\Sigma}_{23 | 14} = \boldsymbol{\Sigma}_{23} - \boldsymbol{\Sigma}_{23, 14} \boldsymbol{\Sigma}_{14}^{-1} \boldsymbol{\Sigma}_{14, 23} $$
+    </div>
+    <p>We inspect the cross-covariance matrix $\boldsymbol{\Sigma}_{23, 14}$ between the block $(X_2, X_3)$ and the block $(X_1, X_4)$. From $\boldsymbol{\Sigma}$, all these cross-terms are zero.</p>
+    <div class="math-display">
+        $$ \boldsymbol{\Sigma}_{23, 14} = \begin{pmatrix} \text{Cov}(X_2, X_1) & \text{Cov}(X_2, X_4) \\ \text{Cov}(X_3, X_1) & \text{Cov}(X_3, X_4) \end{pmatrix} = \begin{pmatrix} 0 & 0 \\ 0 & 0 \end{pmatrix} $$
+    </div>
+    <p>Because the cross-covariance is a zero matrix (confirming our observation in Step 1 that the blocks are independent), conditioning on $(X_1, X_4)$ provides zero information about $(X_2, X_3)$. Thus, the conditional covariance is exactly equal to the marginal covariance:</p>
+    <div class="math-display">
+        $$ \boldsymbol{\Sigma}_{23 | 14} = \boldsymbol{\Sigma}_{23} = \begin{pmatrix} 16 & 4 \\ 4 & 9 \end{pmatrix} $$
+    </div>
+    <p>The partial correlation is therefore identical to the marginal Pearson correlation between $X_2$ and $X_3$:</p>
+    <div class="math-display">
+        $$ \rho_{23 \cdot 14} = \frac{\text{Cov}(X_2, X_3 | X_1, X_4)}{\sqrt{\text{Var}(X_2 | X_1, X_4) \text{Var}(X_3 | X_1, X_4)}} = \frac{4}{\sqrt{16 \times 9}} = \frac{4}{4 \times 3} = \frac{4}{12} = \frac{1}{3} $$
+    </div>
+
+    <div class="conclusion-box">
+        <strong>Final Answer / Q.E.D:</strong><br>
+        (a) $\mathbb{P}(X_1 > X_2 X_3 X_4) = 0.5$<br>
+        (b) The multiple correlation coefficient $R_{1 \cdot 234} = 0.1$<br>
+        (c) The partial correlation coefficient $\rho_{23 \cdot 14} = 1/3$
+    </div>
+</div>
+
+   <!-- ==================== SUMMARY & PRACTICE ==================== -->
     <div class="question-section" id="summary-2026" style="border-bottom: none;">
         <h2>📚 Paper Summary &amp; Key Focus Areas</h2>
         
         <h3>🎯 Core Concepts Tested in This Paper</h3>
         <ul>
-            <li><strong>Real Analysis:</strong> Mastery of the Monotone Convergence Theorem and recognizing fixed-point limits via limit inferior/superior properties.</li>
-            <li><strong>Linear Algebra:</strong> Exploiting structural properties like idempotency and trace-rank equivalence for projection matrices.</li>
-            <li><strong>Combinatorics & Probability:</strong> Identifying structural isomorphisms (like mapping pillars to a $C_4$ graph) and applying Chromatic Polynomials to avoid manual counting errors.</li>
+            <li><strong>Real Analysis &amp; Topology (Q1, Q2):</strong> Mastery of the Monotone Convergence Theorem, fixed-point limits, and recognizing topological traps (e.g., knowing when to apply Bolzano-Weierstrass and when to provide counterexamples for unbounded sets).</li>
+            <li><strong>Matrix Theory &amp; Linear Algebra (Q3):</strong> Exploiting structural properties like idempotency and trace-rank equivalence for projection matrices, and applying the Cauchy-Schwarz inequality for PSD verification.</li>
+            <li><strong>Combinatorics &amp; Probability (Q4, Q5, Q6):</strong> Identifying structural isomorphisms (like mapping pillars to a $C_4$ graph) to use Chromatic Polynomials. Distinguishing between conditional and marginal independence using the Law of Total Covariance, and applying <strong>Jensen's Inequality</strong> to bound moments.</li>
+            <li><strong>Advanced Statistical Inference (Q7, Q9):</strong> Deriving minimal sufficient statistics via the Lehmann-Scheffé (ratio) test, proving ancillarity, and rigorously constructing randomized <strong>Most Powerful (MP) tests</strong> using the Neyman-Pearson Lemma under different boundary size ($\alpha$) conditions.</li>
+            <li><strong>Multivariate Normal &amp; Linear Models (Q8, Q10):</strong> Partitioning covariance matrices to compute multiple and partial correlation coefficients. Using zero-covariance to establish strict block independence, and constructing valid t-statistics under geometric constraints.</li>
         </ul>
 
         <div class="hint-box">
             <strong>💡 ISI Examiner Insight:</strong><br>
-            In ISI subjective papers, explicitly stating the theorems you use (e.g., Cauchy-Schwarz, Monotone Convergence Theorem) is just as important as the final answer. Marks are heavily weighted towards the logical flow and rigor of the intermediate steps.
+            In ISI subjective papers (PSB level), getting the "final numerical answer" is only a fraction of the battle. Examiners look for:<br>
+            1. <strong>Explicit Theorem Citations:</strong> Naming the theorems you use (e.g., Neyman-Pearson, Jensen's, Bolzano-Weierstrass).<br>
+            2. <strong>Checking Assumptions:</strong> Proving covariance is zero *before* claiming independence (as seen in Q8 and Q10).<br>
+            3. <strong>Mathematical Skepticism:</strong> Recognizing when a statement is broadly false and providing a mathematically sound <strong>counterexample</strong> (as required in Q2).
         </div>
     </div>
 
