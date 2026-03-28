@@ -1,0 +1,728 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ISI STB 2023 Model Solutions</title>
+
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>
+        window.MathJax = {
+            tex: { inlineMath: [['$','$']], displayMath: [['$$','$$']] }
+        };
+    </script>
+
+    <style>
+        :root {
+            --primary-blue: #1a365d;
+            --secondary-blue: #2b6cb0;
+            --light-bg: #f7fafc;
+            --text-main: #2d3748;
+            --border-color: #e2e8f0;
+            --bg-color: #edf2f7;
+        }
+
+        body { font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; line-height: 1.6; color: var(--text-main); background-color: var(--bg-color); margin: 0; padding: 40px 20px; }
+        .container { max-width: 900px; margin: 0 auto; background: #ffffff; padding: 50px; border-radius: 12px; box-shadow: 0 10px 25px rgba(0,0,0,0.08); }
+        .nav-menu { text-align: center; margin-bottom: 30px; padding-bottom: 20px; border-bottom: 1px solid var(--border-color); }
+        .nav-menu a { text-decoration: none; color: white; background-color: var(--secondary-blue); padding: 10px 20px; border-radius: 5px; margin: 0 10px; font-weight: bold; transition: background 0.3s; }
+        .nav-menu a:hover { background-color: var(--primary-blue); }
+        .header { text-align: center; border-bottom: 3px solid var(--primary-blue); padding-bottom: 20px; margin-bottom: 40px; }
+        .header h1 { color: var(--primary-blue); font-size: 2.4em; margin: 0 0 10px 0; }
+        .header p { color: #718096; font-size: 1.1em; font-style: italic; }
+        .question-section { margin-bottom: 60px; padding-bottom: 40px; border-bottom: 2px dashed var(--border-color); }
+        h2 { color: var(--primary-blue); background-color: var(--light-bg); padding: 12px 20px; border-left: 5px solid var(--secondary-blue); border-radius: 4px; margin-top: 0; }
+        h3 { color: var(--secondary-blue); margin-top: 25px; }
+        table { width: 100%; border-collapse: collapse; margin: 20px 0; background-color: white; box-shadow: 0 2px 5px rgba(0,0,0,0.02); }
+        th, td { padding: 12px 15px; border: 1px solid var(--border-color); text-align: center; }
+        th { background-color: var(--primary-blue); color: white; }
+        tr:nth-child(even) { background-color: var(--light-bg); }
+        .math-display { overflow-x: auto; padding: 15px 0; text-align: center; background: #fdfdfd; border-radius: 8px; margin: 15px 0; }
+        .conclusion-box { background-color: #ebf8ff; border-left: 5px solid #3182ce; padding: 15px 20px; margin: 25px 0; border-radius: 0 8px 8px 0; }
+        .hint-box { background-color: #f0fff4; border-left: 5px solid #38a169; padding: 15px; margin: 20px 0; border-radius: 0 8px 8px 0; }
+        .problem-box { background-color: #f8fafc; padding: 15px; border-left: 4px solid #4a5568; margin-bottom: 20px; border-radius: 4px; }
+    </style>
+</head>
+<body>
+
+<div class="container">
+
+    <!-- Navigation Menu -->
+    <div class="nav-menu">
+        <a href="index.html">⬅️ Back to Home</a>
+    </div>
+
+    <div class="header">
+        <h1>🏛️ ISI Advanced Examination Practice</h1>
+        <h2>STB (Statistics B) 2023 — Model Solutions</h2>
+        <div class="badges" style="margin: 15px 0;">
+            <img src="https://img.shields.io/badge/Subject-Probability_%26_Statistics-blue?style=for-the-badge" alt="Subject">
+            <img src="https://img.shields.io/badge/Level-ISI_STB-red?style=for-the-badge" alt="Level">
+        </div>
+        <p>Rigorous mathematical proofs and derivations for the Indian Statistical Institute Entrance Examination.</p>
+    </div>
+
+    <!-- ==================== Q1 ==================== -->
+    <div class="question-section" id="q1">
+        <h2>📌 Q1 Most Powerful Test via Neyman-Pearson Lemma (15 Marks)</h2>
+        
+        <div class="problem-box">
+            <strong>Problem Statement:</strong> A procedure with unknown success probability $p$ is tried on $n$ patients. Maximum 2 trials per patient. We record $n_1$ (success on 1st), $n_2$ (success on 2nd), and $n_3$ (fail both). Find the form of the most powerful test for $H_0 : p = 1/2$ vs $H_A : p = 2/3$. Express the test statistic in the form $a^{n_1}b^{n_2}$.
+        </div>
+
+        <h3>🧠 Approach &amp; Key Concepts</h3>
+        <p>This problem is a direct application of the <strong>Neyman-Pearson Lemma</strong>. We first construct the likelihood function $L(p)$ based on the probabilities of the three mutually exclusive outcomes for each patient. By taking the Likelihood Ratio $\Lambda = L(p_A) / L(p_0)$ and absorbing all constant terms into theHere is the first batch of rigorous, step-by-step model solutions for the **ISI STB 2023 Paper (Questions 1 to 4)**. 
+
+I have formatted these perfectly into your existing HTML template with MathJax, so you can easily copy and paste the entire block to create a new `STB_2023.html` page for your repository!
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ISI STB 2023 Model Solutions</title>
+
+    <script src="[https://polyfill.io/v3/polyfill.min.js?features=es6](https://polyfill.io/v3/polyfill.min.js?features=es6)"></script>
+    <script id="MathJax-script" async src="[https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js](https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js)"></script>
+    <script>
+        window.MathJax = {
+            tex: { inlineMath: [['$','$']], displayMath: [['$$','$$']] }
+        };
+    </script>
+
+    <style>
+        :root {
+            --primary-blue: #1a365d;
+            --secondary-blue: #2b6cb0;
+            --light-bg: #f7fafc;
+            --text-main: #2d3748;
+            --border-color: #e2e8f0;
+            --bg-color: #edf2f7;
+        }
+
+        body { font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; line-height: 1.6; color: var(--text-main); background-color: var(--bg-color); margin: 0; padding: 40px 20px; }
+        .container { max-width: 900px; margin: 0 auto; background: #ffffff; padding: 50px; border-radius: 12px; box-shadow: 0 10px 25px rgba(0,0,0,0.08); }
+        .nav-menu { text-align: center; margin-bottom: 30px; padding-bottom: 20px; border-bottom: 1px solid var(--border-color); }
+        .nav-menu a { text-decoration: none; color: white; background-color: var(--secondary-blue); padding: 10px 20px; border-radius: 5px; margin: 0 10px; font-weight: bold; transition: background 0.3s; }
+        .nav-menu a:hover { background-color: var(--primary-blue); }
+        .header { text-align: center; border-bottom: 3px solid var(--primary-blue); padding-bottom: 20px; margin-bottom: 40px; }
+        .header h1 { color: var(--primary-blue); font-size: 2.4em; margin: 0 0 10px 0; }
+        .header p { color: #718096; font-size: 1.1em; font-style: italic; }
+        .question-section { margin-bottom: 60px; padding-bottom: 40px; border-bottom: 2px dashed var(--border-color); }
+        h2 { color: var(--primary-blue); background-color: var(--light-bg); padding: 12px 20px; border-left: 5px solid var(--secondary-blue); border-radius: 4px; margin-top: 0; }
+        h3 { color: var(--secondary-blue); margin-top: 25px; }
+        table { width: 100%; border-collapse: collapse; margin: 20px 0; background-color: white; box-shadow: 0 2px 5px rgba(0,0,0,0.02); }
+        th, td { padding: 12px 15px; border: 1px solid var(--border-color); text-align: center; }
+        th { background-color: var(--primary-blue); color: white; }
+        tr:nth-child(even) { background-color: var(--light-bg); }
+        .math-display { overflow-x: auto; padding: 15px 0; text-align: center; background: #fdfdfd; border-radius: 8px; margin: 15px 0; }
+        .conclusion-box { background-color: #ebf8ff; border-left: 5px solid #3182ce; padding: 15px 20px; margin: 25px 0; border-radius: 0 8px 8px 0; }
+        .hint-box { background-color: #f0fff4; border-left: 5px solid #38a169; padding: 15px; margin: 20px 0; border-radius: 0 8px 8px 0; }
+        .problem-box { background-color: #f8fafc; padding: 15px; border-left: 4px solid #4a5568; margin-bottom: 20px; border-radius: 4px; }
+    </style>
+</head>
+<body>
+
+<div class="container">
+
+    <!-- Navigation Menu -->
+    <div class="nav-menu">
+        <a href="index.html">⬅️ Back to Home</a>
+    </div>
+
+    <div class="header">
+        <h1>🏛️ ISI Advanced Examination Practice</h1>
+        <h2>STB (Statistics B) 2023 — Model Solutions</h2>
+        <div class="badges" style="margin: 15px 0;">
+            <img src="[https://img.shields.io/badge/Subject-Statistical_Inference_%26_Probability-blue?style=for-the-badge](https://img.shields.io/badge/Subject-Statistical_Inference_%26_Probability-blue?style=for-the-badge)" alt="Subject">
+            <img src="[https://img.shields.io/badge/Level-ISI_STB-red?style=for-the-badge](https://img.shields.io/badge/Level-ISI_STB-red?style=for-the-badge)" alt="Level">
+        </div>
+        <p>Rigorous mathematical proofs and derivations for the Indian Statistical Institute Entrance Examination.</p>
+    </div>
+
+    <!-- ==================== Q1 ==================== -->
+    <div class="question-section" id="q1">
+        <h2>📌 Q1 Most Powerful Test via Neyman-Pearson Lemma (15 Marks)</h2>
+        
+        <div class="problem-box">
+            <strong>Problem Statement:</strong> A procedure with unknown success probability $p$ is tried on $n$ patients. If unsuccessful, a second independent trial is conducted on the same patient. We record $n_1$, $n_2$, $n_3$ as the number of patients successful in the 1st trial, successful in the 2nd trial, and unsuccessful in both, respectively. Find the form of the Most Powerful (MP) test for $H_0: p = 1/2$ vs $H_a: p = 2/3$. Express the test statistic as $a^{n_1} b^{n_2}$.
+        </div>
+
+        <h3>🧠 Approach &amp; Key Concepts</h3>
+        <p>This problem uses the <strong>Neyman-Pearson Lemma</strong> to find the Most Powerful (MP) test for simple hypotheses. The experimental setup naturally follows a <strong>Multinomial Distribution</strong> with three categories. We must first define the probabilities for each category in terms of $p$, construct the joint likelihood function, and evaluate the likelihood ratio $\Lambda = L(H_a) / L(H_0)$. The rejection region is defined where this ratio exceeds a critical constant $k$. We then algebraically manipulate the inequality to isolate $n_1$ and $n_2$ to match the requested format.</p>
+
+        <h3>✍️ Step-by-Step Proof / Derivation</h3>
+        
+        <p><strong>Step 1: Define Category Probabilities</strong></p>
+        <p>For any single patient, let's determine the probabilities of falling into each of the three groups:</p>
+        <ul>
+            <li><strong>Group 1 (Success on 1st try):</strong> $P_1 = p$</li>
+            <li><strong>Group 2 (Fail 1st, Success 2nd):</strong> $P_2 = (1-p)p$</li>
+            <li><strong>Group 3 (Fail 1st, Fail 2nd):</strong> $P_3 = (1-p)^2$</li>
+        </ul>
+        <p>Note that $n_1 + n_2 + n_3 = n$, which implies $n_3 = n - n_1 - n_2$.</p>
+
+        <p><strong>Step 2: Construct the Likelihood Function</strong></p>
+        <p>The likelihood function for the multinomial distribution (ignoring the combinatorial constant since it cancels out in the ratio) is:</p>
+        <div class="math-display">
+            $$L(p) \propto (P_1)^{n_1} (P_2)^{n_2} (P_3)^{n_3} = (p)^{n_1} \cdot (p(1-p))^{n_2} \cdot ((1-p)^2)^{n_3}$$
+        </div>
+        <p>Combine the base terms for $p$ and $(1-p)$:</p>
+        <div class="math-display">
+            $$L(p) \propto p^{n_1 + n_2} (1-p)^{n_2 + 2n_3}$$
+        </div>
+        <p>Substitute $n_3 = n - n_1 - n_2$ to express the exponent entirely in terms of $n, n_1,$ and $n_2$:</p>
+        <div class="math-display">
+            $$n_2 + 2(n - n_1 - n_2) = n_2 + 2n - 2n_1 - 2n_2 = 2n - 2n_1 - n_2$$
+        </div>
+        <div class="math-display">
+            $$L(p) \propto p^{n_1 + n_2} (1-p)^{2n - 2n_1 - n_2}$$
+        </div>
+
+        <p><strong>Step 3: Form the Likelihood Ratio</strong></p>
+        <p>By the Neyman-Pearson Lemma, we reject $H_0$ if the likelihood ratio $\Lambda = \frac{L(2/3)}{L(1/2)} > k$.</p>
+        <div class="math-display">
+            $$\Lambda = \frac{(2/3)^{n_1 + n_2} (1/3)^{2n - 2n_1 - n_2}}{(1/2)^{n_1 + n_2} (1/2)^{2n - 2n_1 - n_2}} > k$$
+        </div>
+        <p>Group the bases with matching exponents:</p>
+        <div class="math-display">
+            $$\Lambda = \left( \frac{2/3}{1/2} \right)^{n_1 + n_2} \left( \frac{1/3}{1/2} \right)^{2n - 2n_1 - n_2} > k$$
+        </div>
+        <div class="math-display">
+            $$\Lambda = \left( \frac{4}{3} \right)^{n_1 + n_2} \left( \frac{2}{3} \right)^{2n - 2n_1 - n_2} > k$$
+        </div>
+
+        <p><strong>Step 4: Algebraic Manipulation to Target Format</strong></p>
+        <p>We need to isolate $n_1$ and $n_2$. Expand the exponents and group by variable:</p>
+        <div class="math-display">
+            $$\Lambda = \left( \frac{4}{3} \right)^{n_1} \left( \frac{4}{3} \right)^{n_2} \left( \frac{2}{3} \right)^{-2n_1} \left( \frac{2}{3} \right)^{-n_2} \left( \frac{2}{3} \right)^{2n} > k$$
+        </div>
+        <p>Move the constant term involving $n$ to the right side: $k' = k / (2/3)^{2n}$. Combine the bases for $n_1$ and $n_2$:</p>
+        <div class="math-display">
+            $$\left[ \frac{4}{3} \cdot \left(\frac{2}{3}\right)^{-2} \right]^{n_1} \left[ \frac{4}{3} \cdot \left(\frac{2}{3}\right)^{-1} \right]^{n_2} > k'$$
+        </div>
+        <p>Simplify the inner brackets. For $n_1$:</p>
+        <div class="math-display">
+            $$\frac{4}{3} \cdot \left(\frac{3}{2}\right)^2 = \frac{4}{3} \cdot \frac{9}{4} = 3$$
+        </div>
+        <p>For $n_2$:</p>
+        <div class="math-display">
+            $$\frac{4}{3} \cdot \frac{3}{2} = \frac{12}{6} = 2$$
+        </div>
+        <p>Thus, the inequality simplifies beautifully to:</p>
+        <div class="math-display">
+            $$3^{n_1} 2^{n_2} > k'$$
+        </div>
+
+        <div class="conclusion-box">
+            <strong>Final Answer / Q.E.D:</strong> By constructing the likelihood ratio and grouping the exponents algebraically, the Most Powerful test rejects $H_0$ for large values of the statistic $T = 3^{n_1} 2^{n_2}$. Therefore, the constants are $a = 3$ and $b = 2$.
+        </div>
+    </div>
+
+    <!-- ==================== Q2 ==================== -->
+    <div class="question-section" id="q2">
+        <h2>📌 Q2 Exchangeability and Correlation of Normalized Variables (15 Marks)</h2>
+
+        <div class="problem-box">
+            <strong>Problem Statement:</strong> Let $U_i, i = 1, 2, \dots, n$ be i.i.d Uniform(0,1) random variables. Define $X_i = \frac{U_i}{\sum_{j=1}^n U_j}$.<br>
+            (a) Show that $\text{corr}(X_i, X_j) = \rho$ for all $i \neq j$, for some $\rho < 0$.<br>
+            (b) Hence show that $\rho \to 0$ as $n \to \infty$.
+        </div>
+
+        <h3>🧠 Approach &amp; Key Concepts</h3>
+        <p>This problem utilizes the powerful concept of <strong>Exchangeability</strong>. Even though the variables $X_i$ are complex non-linear ratios of uniforms, they are perfectly symmetric. Because they must sum to $1$ deterministically, their total variance is strictly 0. We can exploit this deterministic sum to set up a linear equation connecting the individual variances and covariances, entirely bypassing the need to compute the nasty marginal distributions of the Dirichlet-like ratios.</p>
+
+        <h3>✍️ Step-by-Step Proof / Derivation</h3>
+        
+        <p><strong>Step 1: Establishing Exchangeability Properties</strong></p>
+        <p>Because the original variables $U_1, \dots, U_n$ are i.i.d., the joint distribution of $(X_1, \dots, X_n)$ is invariant under any permutation of indices. This symmetry dictates two crucial facts:</p>
+        <ol>
+            <li>All $X_i$ have the exact same variance: $\text{Var}(X_1) = \text{Var}(X_2) = \dots = \text{Var}(X_n) = \sigma^2$. (Note: $\sigma^2 > 0$ because $X_i$ is not a constant).</li>
+            <li>All pairs $(X_i, X_j)$ for $i \neq j$ have the exact same covariance: $\text{Cov}(X_i, X_j) = c$.</li>
+        </ol>
+
+        <p><strong>Step 2: Utilizing the Sum Constraint</strong></p>
+        <p>By definition, the sum of all $X_i$ variables equals $1$ deterministically:</p>
+        <div class="math-display">
+            $$\sum_{i=1}^n X_i = \frac{\sum_{i=1}^n U_i}{\sum_{j=1}^n U_j} = 1$$
+        </div>
+        <p>Because the sum is a constant, its variance is exactly zero:</p>
+        <div class="math-display">
+            $$\text{Var}\left(\sum_{i=1}^n X_i\right) = \text{Var}(1) = 0$$
+        </div>
+
+        <p><strong>Step 3: Expanding the Variance of the Sum</strong></p>
+        <p>We expand the variance of the sum using the standard formula incorporating covariances:</p>
+        <div class="math-display">
+            $$\text{Var}\left(\sum_{i=1}^n X_i\right) = \sum_{i=1}^n \text{Var}(X_i) + \sum_{i \neq j} \text{Cov}(X_i, X_j)$$
+        </div>
+        <p>Substitute the symmetric identities $\sigma^2$ and $c$ into the equation. There are $n$ variance terms and $n(n-1)$ covariance pairs:</p>
+        <div class="math-display">
+            $$0 = n\sigma^2 + n(n-1)c$$
+        </div>
+        <p>Solve for the uniform covariance $c$:</p>
+        <div class="math-display">
+            $$n(n-1)c = -n\sigma^2 \implies c = -\frac{\sigma^2}{n-1}$$
+        </div>
+
+        <p><strong>Step 4: Finding the Correlation Coefficient $\rho$ for Part (a)</strong></p>
+        <p>The correlation coefficient is defined as $\rho = \frac{\text{Cov}(X_i, X_j)}{\sqrt{\text{Var}(X_i)\text{Var}(X_j)}}$. Since variances are equal, the denominator is just $\sigma^2$:</p>
+        <div class="math-display">
+            $$\rho = \frac{c}{\sigma^2} = \frac{-\frac{\sigma^2}{n-1}}{\sigma^2} = -\frac{1}{n-1}$$
+        </div>
+        <p>Since we must have at least $n \geq 2$ variables to even have pairs ($i \neq j$), the denominator $(n-1)$ is strictly positive. Therefore, $\rho = -\frac{1}{n-1}$ is strictly less than 0.</p>
+
+        <p><strong>Step 5: Evaluating the Asymptotic Limit for Part (b)</strong></p>
+        <p>We simply take the limit of our derived $\rho$ as the sample size $n$ approaches infinity:</p>
+        <div class="math-display">
+            $$\lim_{n \to \infty} \rho = \lim_{n \to \infty} \left(-\frac{1}{n-1}\right) = 0$$
+        </div>
+        <p>Conceptually, as the pool of variables grows infinitely large, the "constraint" that they must sum to 1 applies less strict pressure on any individual pair, rendering them asymptotically uncorrelated.</p>
+
+        <div class="conclusion-box">
+            <strong>Final Answer / Q.E.D:</strong><br>
+            (a) By expanding the zero-variance deterministic sum, we strictly proved the uniform correlation is $\rho = -\frac{1}{n-1}$, which is strictly negative for $n \geq 2$.<br>
+            (b) Taking the limit, $\lim_{n \to \infty} -\frac{1}{n-1} = 0$, confirming the asymptotic uncorrelation.
+        </div>
+    </div>
+
+    <!-- ==================== Q3 ==================== -->
+    <div class="question-section" id="q3">
+        <h2>📌 Q3 Stopping Times and Wald's Equation (15 Marks)</h2>
+
+        <div class="problem-box">
+            <strong>Problem Statement:</strong> A player rolls two fair dice. If $D = |X_1 - X_2| > 0$, it is added to the score and the process continues. If $D = 0$, the process stops, and the total sum is final score $S$. Find the expected value of $S$, and show that the median of $S$ cannot exceed 24.
+        </div>
+
+        <h3>🧠 Approach &amp; Key Concepts</h3>
+        <p>This problem models a <strong>Random Walk with a Random Stopping Time</strong>. We will use <strong>Wald's Equation</strong> ($E[S] = E[N] \times E[D]$) to find the expected score. The number of rolls $N$ follows a Geometric distribution. After finding the exact expected value, we will apply <strong>Markov's Inequality</strong> to generate an upper bound for the probability distribution and formally restrict the median.</p>
+
+        <h3>✍️ Step-by-Step Proof / Derivation</h3>
+        
+        <p><strong>Step 1: Analyzing the Dice Difference $D$</strong></p>
+        <p>There are $6 \times 6 = 36$ possible outcomes when rolling two fair dice. Let's find the probability distribution of $D = |X_1 - X_2|$:</p>
+        <ul>
+            <li>$D=0$: (1,1), (2,2), ..., (6,6) $\implies 6$ outcomes. Probability = $6/36 = 1/6$.</li>
+            <li>$D=1$: (1,2), (2,3), ..., (5,6) and reversed $\implies 10$ outcomes. Probability = $10/36$.</li>
+            <li>$D=2$: (1,3), (2,4), ..., (4,6) and reversed $\implies 8$ outcomes. Probability = $8/36$.</li>
+            <li>$D=3$: (1,4), (2,5), (3,6) and reversed $\implies 6$ outcomes. Probability = $6/36$.</li>
+            <li>$D=4$: (1,5), (2,6) and reversed $\implies 4$ outcomes. Probability = $4/36$.</li>
+            <li>$D=5$: (1,6) and reversed $\implies 2$ outcomes. Probability = $2/36$.</li>
+        </ul>
+        <p>The unconditional expected value of a single roll $D$ is:</p>
+        <div class="math-display">
+            $$E[D] = \frac{1}{36} \big( 0(6) + 1(10) + 2(8) + 3(6) + 4(4) + 5(2) \big) = \frac{0 + 10 + 16 + 18 + 16 + 10}{36} = \frac{70}{36} = \frac{35}{18}$$
+        </div>
+
+        <p><strong>Step 2: Defining the Stopping Time and Wald's Equation</strong></p>
+        <p>The game stops on the very first roll where $D=0$. Therefore, the total number of rolls $N$ (including the final stopping roll) follows a <strong>Geometric Distribution</strong> with success probability $p = 1/6$.</p>
+        <p>The expected number of total rolls is:</p>
+        <div class="math-display">
+            $$E[N] = \frac{1}{p} = \frac{1}{1/6} = 6$$
+        </div>
+        <p>The total score is the sum of all rolls: $S = \sum_{i=1}^N D_i$. Even though the final roll $D_N$ is strictly 0, it contributes 0 to the sum, so the mathematical formula holds. Because the stopping time $N$ depends only on the current roll and not on future rolls, we can apply <strong>Wald's Equation</strong>:</p>
+        <div class="math-display">
+            $$E[S] = E[N] \cdot E[D] = 6 \cdot \left(\frac{35}{18}\right) = \frac{35}{3} \approx 11.67$$
+        </div>
+
+        <p><strong>Step 3: Bounding the Median via Markov's Inequality</strong></p>
+        <p>We are asked to prove that the median $m$ of $S$ cannot exceed 24. Since $S$ is a non-negative random variable (sums of absolute differences), we can apply <strong>Markov's Inequality</strong>:</p>
+        <div class="math-display">
+            $$P(S \geq a) \leq \frac{E[S]}{a}$$
+        </div>
+        <p>Let's evaluate the probability that the score is 24 or greater:</p>
+        <div class="math-display">
+            $$P(S \geq 24) \leq \frac{35/3}{24} = \frac{35}{72}$$
+        </div>
+        <p>Notice that $35/72$ is strictly less than $36/72 = 0.5$. Therefore:</p>
+        <div class="math-display">
+            $$P(S \geq 24) < 0.5$$
+        </div>
+        <p>By the fundamental definition of the median $m$, the probability of drawing a value greater than or equal to the median must be at least 0.5 ($P(S \geq m) \geq 0.5$). Since the probability mass at and above 24 is already too small (less than 0.5), the median $m$ must be strictly located to the left of 24.</p>
+
+        <div class="conclusion-box">
+            <strong>Final Answer / Q.E.D:</strong><br>
+            1. Using Wald's Equation, the expected value of the final score is exactly $E[S] = \frac{35}{3}$.<br>
+            2. By applying Markov's Inequality, we proved $P(S \geq 24) < 0.5$, which strictly dictates that the median of $S$ must be strictly less than 24.
+        </div>
+    </div>
+
+    <!-- ==================== Q4 ==================== -->
+    <div class="question-section" id="q4">
+        <h2>📌 Q4 Poisson Thinning and Random Sums (15 Marks)</h2>
+
+        <div class="problem-box">
+            <strong>Problem Statement:</strong> Let $Y_1 \sim \text{Poisson}(\lambda)$, and $Y_2 = \sum_{i=1}^{Y_1} B_i + \epsilon_2$, where $B_i \sim \text{Bernoulli}(p)$ are i.i.d, and $\epsilon_2 \sim \text{Poisson}((1-p)\lambda)$, independently of $Y_1$. Also, $B_i$ and $\epsilon_2$ are independent.<br>
+            (a) Show that $Y_2 \sim \text{Poisson}(\lambda)$.<br>
+            (b) Show that $\text{corr}(Y_1, Y_2) = p$.
+        </div>
+
+        <h3>🧠 Approach &amp; Key Concepts</h3>
+        <p>This problem demonstrates the properties of <strong>Poisson Thinning</strong> and moment derivation via the <strong>Law of Total Expectation/Variance</strong>. 
+        <ul>
+            <li><strong>For part (a):</strong> The random sum $\sum B_i$ represents retaining events from a Poisson process with probability $p$. This forms a new, independent "thinned" Poisson distribution. We add this to $\epsilon_2$ to recover the original parameter.</li>
+            <li><strong>For part (b):</strong> We derive the covariance by conditioning on $Y_1$. Because $Y_1$ generates the random sum, they are positively correlated. We use $Cov(Y_1, Z) = E[Y_1 E[Z|Y_1]] - E[Y_1]E[Z]$ to unpack the conditional structure.</li>
+        </ul></p>
+
+        <h3>✍️ Step-by-Step Proof / Derivation</h3>
+        
+        <p><strong>Step 1: Distribution of the Random Sum for Part (a)</strong></p>
+        <p>Let $Z = \sum_{i=1}^{Y_1} B_i$. Since $B_i$ are independent Bernoulli variables, the conditional distribution of $Z$ given $Y_1 = y$ is exactly Binomial:</p>
+        <div class="math-display">
+            $$Z \mid Y_1 \sim \text{Binomial}(Y_1, p)$$
+        </div>
+        <p>We find the unconditional distribution of $Z$ using Probability Generating Functions (PGF). The PGF of a random sum $Z = \sum_{1}^N X_i$ is $G_Z(s) = G_N(G_X(s))$.</p>
+        <ul>
+            <li>$G_{Y_1}(s) = e^{\lambda(s-1)}$ (Poisson PGF)</li>
+            <li>$G_{B_i}(s) = (1-p) + ps$ (Bernoulli PGF)</li>
+        </ul>
+        <div class="math-display">
+            $$G_Z(s) = e^{\lambda(G_B(s) - 1)} = e^{\lambda((1-p) + ps - 1)} = e^{\lambda(ps - p)} = e^{p\lambda(s-1)}$$
+        </div>
+        <p>This is precisely the PGF of a Poisson distribution. Thus, unconditionally, $Z \sim \text{Poisson}(p\lambda)$.</p>
+
+        <p><strong>Step 2: Recombining the Variables for Part (a)</strong></p>
+        <p>We are given $Y_2 = Z + \epsilon_2$. We know $\epsilon_2 \sim \text{Poisson}((1-p)\lambda)$.</p>
+        <p>Because $\epsilon_2$ is independent of $Y_1$ (and thus independent of $Z$, since $Z$ is just a function of $Y_1$ and independent coin flips), $Y_2$ is the sum of two strictly independent Poisson random variables. The sum of independent Poisson variables is another Poisson variable whose parameter is the sum of the individual parameters:</p>
+        <div class="math-display">
+            $$Y_2 \sim \text{Poisson}(p\lambda + (1-p)\lambda) = \text{Poisson}(\lambda)$$
+        </div>
+
+        <hr style="border: 0; border-top: 1px dashed #e2e8f0; margin: 30px 0;">
+
+        <p><strong>Step 3: Calculating Covariance for Part (b)</strong></p>
+        <p>We want to find $\text{corr}(Y_1, Y_2) = \frac{\text{Cov}(Y_1, Y_2)}{\sqrt{\text{Var}(Y_1)\text{Var}(Y_2)}}$. Since both are Poisson($\lambda$), their variances are strictly $\lambda$. The denominator is $\sqrt{\lambda \cdot \lambda} = \lambda$. Let's compute the covariance:</p>
+        <div class="math-display">
+            $$\text{Cov}(Y_1, Y_2) = \text{Cov}(Y_1, Z + \epsilon_2) = \text{Cov}(Y_1, Z) + \text{Cov}(Y_1, \epsilon_2)$$
+        </div>
+        <p>Because $\epsilon_2$ is given as completely independent of $Y_1$, their covariance is 0. We evaluate $\text{Cov}(Y_1, Z)$ using expectations:</p>
+        <div class="math-display">
+            $$\text{Cov}(Y_1, Z) = \mathbb{E}[Y_1 Z] - \mathbb{E}[Y_1]\mathbb{E}[Z]$$
+        </div>
+        <p>We use the Law of Total Expectation on the joint term $\mathbb{E}[Y_1 Z]$ by conditioning on $Y_1$:</p>
+        <div class="math-display">
+            $$\mathbb{E}[Y_1 Z] = \mathbb{E}[\mathbb{E}[Y_1 Z \mid Y_1]]$$
+        </div>
+        <p>Since we are conditioning on $Y_1$, it behaves as a constant and can be pulled out of the inner expectation:</p>
+        <div class="math-display">
+            $$= \mathbb{E}[Y_1 \mathbb{E}[Z \mid Y_1]]$$
+        </div>
+        <p>As established earlier, $Z \mid Y_1$ is Binomial($Y_1, p$), so its expected value is $pY_1$. Substitute this back:</p>
+        <div class="math-display">
+            $$= \mathbb{E}[Y_1 (pY_1)] = p \mathbb{E}[Y_1^2]$$
+        </div>
+        <p>For a Poisson random variable, the second moment is $\mathbb{E}[Y_1^2] = \text{Var}(Y_1) + (\mathbb{E}[Y_1])^2 = \lambda + \lambda^2$.</p>
+        <div class="math-display">
+            $$\mathbb{E}[Y_1 Z] = p(\lambda + \lambda^2) = p\lambda + p\lambda^2$$
+        </div>
+        <p>Now, substitute this back into the Covariance equation. Remember $\mathbb{E}[Y_1] = \lambda$ and $\mathbb{E}[Z] = p\lambda$:</p>
+        <div class="math-display">
+            $$\text{Cov}(Y_1, Z) = (p\lambda + p\lambda^2) - (\lambda)(p\lambda) = p\lambda + p\lambda^2 - p\lambda^2 = p\lambda$$
+        </div>
+
+        <p><strong>Step 4: Final Correlation Calculation</strong></p>
+        <p>Substitute the covariance and variances into the correlation formula:</p>
+        <div class="math-display">
+            $$\text{corr}(Y_1, Y_2) = \frac{p\lambda}{\lambda} = p$$
+        </div>
+
+        <div class="conclusion-box">
+            <strong>Final Answer / Q.E.D:</strong><br>
+            (a) By proving the random sum $Z$ is Poisson via PGFs, the sum of independent variables strictly yields $Y_2 \sim \text{Poisson}(\lambda)$.<br>
+            (b) By conditioning the joint moment on $Y_1$, we isolated the covariance as $p\lambda$, proving the correlation strictly evaluates to $p$.
+        </div>
+    </div>
+
+
+
+
+  <!-- ==================== Q5 ==================== -->
+    <div class="question-section" id="q5">
+        <h2>📌 Q5 UMVUE and Rao-Blackwellization in Poisson Samples (15 Marks)</h2>
+
+        <div class="problem-box">
+            <strong>Problem Statement:</strong> Let $X_1, X_2, \dots, X_n$ be i.i.d $\text{Poisson}(\lambda)$ random variables. Let $\bar{X}$ be the sample mean and $S^2 = \frac{1}{n-1}\sum_{i=1}^n (X_i - \bar{X})^2$.<br>
+            (a) Show that $\bar{X}$ is the Uniformly Minimum Variance Unbiased Estimator (UMVUE) of $\lambda$.<br>
+            (b) Show that $\mathbb{E}(S^2 \mid \bar{X}) = \bar{X}$.<br>
+            (c) Hence show that $\text{Var}(S^2) > \text{Var}(\bar{X})$.
+        </div>
+
+        <h3>🧠 Approach &amp; Key Concepts</h3>
+        <p>This problem evaluates your mastery of <strong>Sufficiency, Completeness, and the Lehmann-Scheffé Theorem</strong>. 
+        <ul>
+            <li><strong>For part (a):</strong> We identify the complete sufficient statistic using the Exponential Family form and apply Lehmann-Scheffé.</li>
+            <li><strong>For part (b):</strong> We rely on the uniqueness property of UMVUEs. If we take any unbiased estimator (like $S^2$) and condition it on a complete sufficient statistic, the resulting function *must* be the unique UMVUE.</li>
+            <li><strong>For part (c):</strong> We use the <strong>Law of Total Variance</strong> (also known as Eve's Law) to decompose the variance of $S^2$ into the variance of the conditional expectation plus the expectation of the conditional variance, proving strict inequality.</li>
+        </ul></p>
+
+        <h3>✍️ Step-by-Step Proof / Derivation</h3>
+        
+        <p><strong>Step 1: Finding the Complete Sufficient Statistic for Part (a)</strong></p>
+        <p>The joint probability mass function of the random sample is:</p>
+        <div class="math-display">
+            $$f(x_1, \dots, x_n \mid \lambda) = \prod_{i=1}^n \frac{e^{-\lambda} \lambda^{x_i}}{x_i!} = \frac{e^{-n\lambda} \lambda^{\sum x_i}}{\prod x_i!}$$
+        </div>
+        <p>We can rewrite this in the standard exponential family format:</p>
+        <div class="math-display">
+            $$= \left( \frac{1}{\prod x_i!} \right) \exp\left( -n\lambda + \left(\sum_{i=1}^n x_i\right) \ln(\lambda) \right)$$
+        </div>
+        <p>By the Factorization Theorem, $T = \sum_{i=1}^n X_i$ is a sufficient statistic for $\lambda$. Because the distribution belongs to the full-rank exponential family (the parameter space for $\ln(\lambda)$ contains an open interval in $\mathbb{R}$), $T$ is also a <strong>complete</strong> sufficient statistic.</p>
+        <p>Since $\bar{X} = T/n$, it is a 1-to-1 function of $T$, making $\bar{X}$ itself a complete sufficient statistic. We know $\mathbb{E}(\bar{X}) = \lambda$ (it is unbiased). By the <strong>Lehmann-Scheffé Theorem</strong>, any unbiased estimator that is a function of a complete sufficient statistic is the unique UMVUE. Thus, $\bar{X}$ is the UMVUE for $\lambda$.</p>
+
+        <hr style="border: 0; border-top: 1px dashed #e2e8f0; margin: 30px 0;">
+
+        <p><strong>Step 2: Proving the Conditional Expectation for Part (b)</strong></p>
+        <p>We know that the sample variance $S^2$ is an unbiased estimator for the population variance. For a Poisson distribution, the population variance is exactly $\lambda$. Therefore:</p>
+        <div class="math-display">
+            $$\mathbb{E}(S^2) = \lambda$$
+        </div>
+        <p>By the <strong>Rao-Blackwell Theorem</strong>, if we condition an unbiased estimator on a sufficient statistic, we obtain an estimator that is also unbiased and has equal or smaller variance. Let $\phi(\bar{X}) = \mathbb{E}(S^2 \mid \bar{X})$.</p>
+        <p>Because $\bar{X}$ is a <em>complete</em> sufficient statistic, Lehmann-Scheffé dictates that there is exactly <strong>one</strong> unbiased estimator that is a function of $\bar{X}$. This unique estimator is the UMVUE.</p>
+        <p>Since we already established in (a) that $\bar{X}$ is the unique UMVUE, the conditioned function $\phi(\bar{X})$ must strictly equal $\bar{X}$ almost surely:</p>
+        <div class="math-display">
+            $$\mathbb{E}(S^2 \mid \bar{X}) = \bar{X}$$
+        </div>
+
+        <hr style="border: 0; border-top: 1px dashed #e2e8f0; margin: 30px 0;">
+
+        <p><strong>Step 3: Proving Strict Variance Inequality for Part (c)</strong></p>
+        <p>By the Law of Total Variance (Conditional Variance Formula):</p>
+        <div class="math-display">
+            $$\text{Var}(S^2) = \mathbb{E}[\text{Var}(S^2 \mid \bar{X})] + \text{Var}(\mathbb{E}[S^2 \mid \bar{X}])$$
+        </div>
+        <p>Substitute the identity $\mathbb{E}(S^2 \mid \bar{X}) = \bar{X}$ from part (b) into the second term:</p>
+        <div class="math-display">
+            $$\text{Var}(S^2) = \mathbb{E}[\text{Var}(S^2 \mid \bar{X})] + \text{Var}(\bar{X})$$
+        </div>
+        <p>Since variance must be non-negative, $\text{Var}(S^2 \mid \bar{X}) \geq 0$. Furthermore, for any sample size $n \geq 2$, $S^2$ is not perfectly determined by $\bar{X}$ (i.e., multiple different data sets can have the same mean but different variances). Therefore, the conditional variance is strictly positive with positive probability, meaning its expectation is strictly greater than 0:</p>
+        <div class="math-display">
+            $$\mathbb{E}[\text{Var}(S^2 \mid \bar{X})] > 0$$
+        </div>
+        <p>Adding this strictly positive term to $\text{Var}(\bar{X})$ yields:</p>
+        <div class="math-display">
+            $$\text{Var}(S^2) > \text{Var}(\bar{X})$$
+        </div>
+
+        <div class="conclusion-box">
+            <strong>Final Answer / Q.E.D:</strong><br>
+            (a) $\bar{X}$ is unbiased and a function of a complete sufficient statistic, making it the UMVUE by Lehmann-Scheffé.<br>
+            (b) Because the UMVUE is unique, conditioning any unbiased estimator (like $S^2$) on the complete sufficient statistic must return the UMVUE ($\bar{X}$).<br>
+            (c) The Law of Total Variance definitively shows $\text{Var}(S^2) = \text{Var}(\bar{X}) + \text{Positive Term}$, proving strict inequality.
+        </div>
+    </div>
+
+    <!-- ==================== Q6 ==================== -->
+    <div class="question-section" id="q6">
+        <h2>📌 Q6 Unbalanced Randomized Block Design (15 Marks)</h2>
+
+        <div class="problem-box">
+            <strong>Problem Statement:</strong> 4 blocks, each with 5 homogeneous plots. Treatments A, B, C, D are assigned randomly. A is applied twice per block, while B, C, D are applied once per block. Let $\tau_1, \tau_2, \tau_3, \tau_4$ be the treatment effects. Errors are i.i.d $N(0, \sigma^2)$. Find the Least Squares Estimators of $\tau_1 - \tau_j$ for $j=2,3,4$, and find their variances.
+        </div>
+
+        <h3>🧠 Approach &amp; Key Concepts</h3>
+        <p>This is a <strong>Randomized Block Design (RBD)</strong>, but it is <em>not balanced</em> because Treatment 1 (A) is replicated more often than the others within each block. We must use <strong>Intra-Block Analysis</strong> via the <strong>C-Matrix</strong>.
+        <ul>
+            <li>We construct the Incidence Matrix $N$.</li>
+            <li>We compute the $C$-matrix using $C = R - \frac{1}{k} N N^T$.</li>
+            <li>We solve the normal equations $C \hat{\tau} = Q$ (where $Q$ represents the adjusted treatment totals) subject to the standard constraint $\sum \hat{\tau}_i = 0$.</li>
+        </ul></p>
+
+        <h3>✍️ Step-by-Step Proof / Derivation</h3>
+        
+        <p><strong>Step 1: Defining the Design Parameters</strong></p>
+        <p>Let Treatments $1,2,3,4$ correspond to A,B,C,D.
+        Blocks $b = 4$, Plots per block $k = 5$.
+        Replications $r_1 = 8$, and $r_2 = r_3 = r_4 = 4$.
+        The Incidence Matrix $N$ (where entry $n_{ij}$ is the number of times treatment $i$ appears in block $j$) is:</p>
+        <div class="math-display">
+            $$N = \begin{pmatrix} 2 & 2 & 2 & 2 \\ 1 & 1 & 1 & 1 \\ 1 & 1 & 1 & 1 \\ 1 & 1 & 1 & 1 \end{pmatrix}$$
+        </div>
+
+        <p><strong>Step 2: Constructing the C-Matrix</strong></p>
+        <p>The information matrix for treatment effects (adjusted for blocks) is $C = R - \frac{1}{k} N N^T$, where $R = \text{diag}(r_1, r_2, r_3, r_4)$.</p>
+        <p>First, we compute $N N^T$. Since all columns of $N$ are identical $(2,1,1,1)^T$, the inner product of the $i$-th row and $j$-th row is $4 \times (n_{i1} n_{j1})$:</p>
+        <div class="math-display">
+            $$N N^T = 4 \begin{pmatrix} 4 & 2 & 2 & 2 \\ 2 & 1 & 1 & 1 \\ 2 & 1 & 1 & 1 \\ 2 & 1 & 1 & 1 \end{pmatrix} = \begin{pmatrix} 16 & 8 & 8 & 8 \\ 8 & 4 & 4 & 4 \\ 8 & 4 & 4 & 4 \\ 8 & 4 & 4 & 4 \end{pmatrix}$$
+        </div>
+        <p>Now, calculate $C$ using $k=5$:</p>
+        <div class="math-display">
+            $$C = \begin{pmatrix} 8 & 0 & 0 & 0 \\ 0 & 4 & 0 & 0 \\ 0 & 0 & 4 & 0 \\ 0 & 0 & 0 & 4 \end{pmatrix} - \frac{1}{5} \begin{pmatrix} 16 & 8 & 8 & 8 \\ 8 & 4 & 4 & 4 \\ 8 & 4 & 4 & 4 \\ 8 & 4 & 4 & 4 \end{pmatrix} = \frac{1}{5} \begin{pmatrix} 24 & -8 & -8 & -8 \\ -8 & 16 & -4 & -4 \\ -8 & -4 & 16 & -4 \\ -8 & -4 & -4 & 16 \end{pmatrix}$$
+        </div>
+
+        <p><strong>Step 3: Solving the Normal Equations</strong></p>
+        <p>The normal equations are $C \hat{\tau} = Q$, where $Q_i = T_i - \frac{1}{k}\sum_{j} n_{ij} B_j$ (adjusted treatment totals). Note that $\sum Q_i = 0$.</p>
+        <p>Let's write out the first two equations (multiplying both sides by 5 to clear fractions):</p>
+        <ul>
+            <li>Eq 1: $24\hat{\tau}_1 - 8\hat{\tau}_2 - 8\hat{\tau}_3 - 8\hat{\tau}_4 = 5Q_1$</li>
+            <li>Eq 2: $-8\hat{\tau}_1 + 16\hat{\tau}_2 - 4\hat{\tau}_3 - 4\hat{\tau}_4 = 5Q_2$</li>
+        </ul>
+        <p>We apply the standard identifiability constraint: $\sum \hat{\tau}_i = 0$. This means $-\hat{\tau}_2 - \hat{\tau}_3 - \hat{\tau}_4 = \hat{\tau}_1$. Substitute this into Eq 1:</p>
+        <div class="math-display">
+            $$24\hat{\tau}_1 + 8\hat{\tau}_1 = 5Q_1 \implies 32\hat{\tau}_1 = 5Q_1 \implies \hat{\tau}_1 = \frac{5}{32}Q_1$$
+        </div>
+        <p>For Eq 2, we know $-4\hat{\tau}_3 - 4\hat{\tau}_4 = 4\hat{\tau}_1 + 4\hat{\tau}_2$. Substitute this into Eq 2:</p>
+        <div class="math-display">
+            $$-8\hat{\tau}_1 + 16\hat{\tau}_2 + 4\hat{\tau}_1 + 4\hat{\tau}_2 = 5Q_2 \implies 20\hat{\tau}_2 - 4\hat{\tau}_1 = 5Q_2$$
+        </div>
+        <p>Substitute $\hat{\tau}_1$ to solve for $\hat{\tau}_2$:</p>
+        <div class="math-display">
+            $$20\hat{\tau}_2 = 5Q_2 + 4\left(\frac{5}{32}Q_1\right) = 5Q_2 + \frac{5}{8}Q_1 \implies \hat{\tau}_2 = \frac{1}{4}Q_2 + \frac{1}{32}Q_1$$
+        </div>
+
+        <p><strong>Step 4: Formulating the Contrast Estimator</strong></p>
+        <p>We want the estimator for $\tau_1 - \tau_2$ (due to the symmetry of B, C, and D, the formula will be identical for $\tau_3$ and $\tau_4$).</p>
+        <div class="math-display">
+            $$\widehat{\tau_1 - \tau_2} = \hat{\tau}_1 - \hat{\tau}_2 = \frac{5}{32}Q_1 - \left(\frac{1}{4}Q_2 + \frac{1}{32}Q_1\right) = \frac{4}{32}Q_1 - \frac{1}{4}Q_2$$
+        </div>
+        <div class="math-display">
+            $$\widehat{\tau_1 - \tau_j} = \frac{1}{8}Q_1 - \frac{1}{4}Q_j \quad \text{for } j = 2, 3, 4$$
+        </div>
+
+        <p><strong>Step 5: Calculating the Variance of the Estimator</strong></p>
+        <p>For any contrast $l^T \hat{\tau} = \sum c_i Q_i$, the variance is $\text{Var}(\sum c_i Q_i) = \sigma^2 \sum_{i,j} c_i c_j C_{ij}$.</p>
+        <p>Using $c_1 = \frac{1}{8}$, $c_j = -\frac{1}{4}$, and $c_k = 0$ for others, we pull values directly from our $C$-matrix in Step 2:</p>
+        <div class="math-display">
+            $$\text{Var} = \sigma^2 \left[ \left(\frac{1}{8}\right)^2 C_{11} + \left(-\frac{1}{4}\right)^2 C_{jj} - 2\left(\frac{1}{8}\right)\left(\frac{1}{4}\right) C_{1j} \right]$$
+        </div>
+        <div class="math-display">
+            $$= \sigma^2 \left[ \frac{1}{64}\left(\frac{24}{5}\right) + \frac{1}{16}\left(\frac{16}{5}\right) - \frac{1}{16}\left(-\frac{8}{5}\right) \right]$$
+        </div>
+        <div class="math-display">
+            $$= \sigma^2 \left[ \frac{3}{40} + \frac{8}{40} + \frac{4}{40} \right] = \sigma^2 \left( \frac{15}{40} \right) = \frac{3}{8}\sigma^2$$
+        </div>
+
+        <div class="conclusion-box">
+            <strong>Final Answer / Q.E.D:</strong><br>
+            1. The Least Squares Estimators for the contrasts are $\widehat{\tau_1 - \tau_j} = \frac{1}{8}Q_1 - \frac{1}{4}Q_j$ for $j=2,3,4$.<br>
+            2. The variance of each of these estimators is exactly $\frac{3}{8}\sigma^2$.
+        </div>
+    </div>
+
+    <!-- ==================== Q7 ==================== -->
+    <div class="question-section" id="q7">
+        <h2>📌 Q7 $L^1$ Convergence and Uniform Integrability Bounds (15 Marks)</h2>
+
+        <div class="problem-box">
+            <strong>Problem Statement:</strong> Let $\{X_n\}_{n \geq 1}$ and $X$ be integrable random variables defined on the same probability space $(\Omega, \mathscr{A}, P)$. Show that $E(|X_n - X|) \to 0$ as $n \to \infty$, if and only if $\int_A X_n dP \to \int_A X dP$ uniformly in $A \in \mathscr{A}$.
+        </div>
+
+        <h3>🧠 Approach &amp; Key Concepts</h3>
+        <p>This proof bridges standard <strong>Measure Theory</strong> concepts, specifically linking $L^1$ convergence to uniform set-wise convergence (a variant of Scheffé’s lemma logic). 
+        <ul>
+            <li><strong>Forward Direction ($\implies$):</strong> We use the basic triangle inequality for integrals. If the total expected absolute difference bounds to zero globally, it uniformly bounds any subset $A$.</li>
+            <li><strong>Reverse Direction ($\Longleftarrow$):</strong> We cleverly select a <em>specific, variable sequence of sets</em> $A_n = \{\omega : X_n(\omega) > X(\omega)\}$ that mathematically strips away the absolute value bars inside the expectation, allowing us to leverage the assumed uniform convergence to prove $L^1$ convergence.</li>
+        </ul></p>
+
+        <h3>✍️ Step-by-Step Proof / Derivation</h3>
+        
+        <p><strong>Part 1: Forward Direction ($\implies$)</strong></p>
+        <p>Assume $\mathbb{E}(|X_n - X|) \to 0$ as $n \to \infty$. We must show that $\sup_{A \in \mathscr{A}} \left| \int_A X_n dP - \int_A X dP \right| \to 0$.</p>
+        <p>For any arbitrary measurable set $A \in \mathscr{A}$, we can bound the difference of the integrals by bringing the absolute value inside:</p>
+        <div class="math-display">
+            $$\left| \int_A X_n dP - \int_A X dP \right| = \left| \int_A (X_n - X) dP \right| \leq \int_A |X_n - X| dP$$
+        </div>
+        <p>Because the integrand $|X_n - X|$ is strictly non-negative, integrating it over a subset $A$ will always be less than or equal to integrating it over the entire sample space $\Omega$:</p>
+        <div class="math-display">
+            $$\int_A |X_n - X| dP \leq \int_\Omega |X_n - X| dP = \mathbb{E}(|X_n - X|)$$
+        </div>
+        <p>Notice that this upper bound $\mathbb{E}(|X_n - X|)$ is completely independent of the choice of set $A$. Therefore, the supremum over all sets is also bounded by this expectation:</p>
+        <div class="math-display">
+            $$\sup_{A \in \mathscr{A}} \left| \int_A X_n dP - \int_A X dP \right| \leq \mathbb{E}(|X_n - X|)$$
+        </div>
+        <p>Since we assumed $\mathbb{E}(|X_n - X|) \to 0$, the supremum must also shrink to zero by the Squeeze Theorem, establishing uniform convergence.</p>
+
+        <hr style="border: 0; border-top: 1px dashed #e2e8f0; margin: 30px 0;">
+
+        <p><strong>Part 2: Reverse Direction ($\Longleftarrow$)</strong></p>
+        <p>Assume $\int_A X_n dP \to \int_A X dP$ uniformly for all $A \in \mathscr{A}$. We must show that $\mathbb{E}(|X_n - X|) \to 0$.</p>
+        <p>Let's unpack the expected absolute difference. We partition the sample space $\Omega$ into two disjoint, $n$-dependent measurable sets based on the sign of the difference:</p>
+        <ul>
+            <li>$A_n = \{\omega \in \Omega : X_n(\omega) > X(\omega)\}$</li>
+            <li>$A_n^c = \{\omega \in \Omega : X_n(\omega) \leq X(\omega)\}$</li>
+        </ul>
+        <p>We can now write the $L^1$ norm explicitly without absolute value bars:</p>
+        <div class="math-display">
+            $$\mathbb{E}(|X_n - X|) = \int_{A_n} (X_n - X) dP - \int_{A_n^c} (X_n - X) dP$$
+        </div>
+        <p>We are given that $\int_A (X_n - X) dP \to 0$ uniformly for all sets. By the definition of uniform convergence, for any $\epsilon > 0$, there exists an integer $N$ such that for all $n > N$ and for <em>every possible set</em> $A \in \mathscr{A}$:</p>
+        <div class="math-display">
+            $$\left| \int_A (X_n - X) dP \right| < \frac{\epsilon}{2}$$
+        </div>
+        <p>Because $A_n$ and $A_n^c$ are valid measurable sets in $\mathscr{A}$ for any fixed $n$, this bound strictly applies to them. For any $n > N$:</p>
+        <div class="math-display">
+            $$\mathbb{E}(|X_n - X|) = \left| \int_{A_n} (X_n - X) dP \right| + \left| \int_{A_n^c} (X_n - X) dP \right| < \frac{\epsilon}{2} + \frac{\epsilon}{2} = \epsilon$$
+        </div>
+        <p>Since this holds for any arbitrarily small $\epsilon > 0$, we have formally proven that $\mathbb{E}(|X_n - X|) \to 0$.</p>
+
+        <div class="conclusion-box">
+            <strong>Final Answer / Q.E.D:</strong> By establishing bounds via the triangle inequality for integrals (forward) and partitioning the sample space to resolve the absolute value (reverse), we strictly proved the "if and only if" equivalence between $L^1$ convergence and uniform set-wise integral convergence.
+        </div>
+    </div>
+
+    <!-- ==================== Q8 ==================== -->
+    <div class="question-section" id="q8">
+        <h2>📌 Q8 MLE for Piecewise / Segmented Regression Models (15 Marks)</h2>
+
+        <div class="problem-box">
+            <strong>Problem Statement:</strong> We have independent observations $Y_i \sim N(f(x_i), \sigma^2)$ where $x_i = i/n$ for $i=0, \dots, n$. The true function is piecewise quadratic:<br>
+            $f(x) = \alpha_1 + \beta_1 x + \gamma_1 x^2$ for $x \leq 0.5$<br>
+            $f(x) = \alpha_2 + \beta_2 x + \gamma_2 x^2$ for $x > 0.5$<br>
+            (a) If $\gamma_1 = \gamma_2 = 0$ (linear), obtain the MLEs for $\alpha_1, \alpha_2, \beta_1, \beta_2, \sigma^2$.<br>
+            (b) Explain how to proceed if $\gamma_1, \gamma_2$ are also unknown.
+        </div>
+
+        <h3>🧠 Approach &amp; Key Concepts</h3>
+        <p>Because the independent variable $x_i$ is deterministic and rigidly sorted ($x_i = i/n$), the threshold $x=0.5$ physically cuts the dataset into two strictly disjoint subsets. Importantly, the problem does <em>not</em> impose a continuity constraint (like $f(0.5^-) = f(0.5^+)$). Therefore, the joint likelihood function factors perfectly into two independent components. We can solve for the MLEs by running two completely separate Ordinary Least Squares (OLS) regressions, and then pooling their residual errors to estimate the global variance $\sigma^2$.</p>
+
+        <h3>✍️ Step-by-Step Proof / Derivation</h3>
+        
+        <p><strong>Step 1: Partitioning the Likelihood Function for Part (a)</strong></p>
+        <p>Let $I_1 = \{i : x_i \leq 0.5\}$ and $I_2 = \{i : x_i > 0.5\}$. Since the $n+1$ observations are independent, the joint likelihood function is the product of individual normal densities:</p>
+        <div class="math-display">
+            $$L(\Theta) = \prod_{i=0}^n \frac{1}{\sqrt{2\pi\sigma^2}} \exp\left( -\frac{(Y_i - f(x_i))^2}{2\sigma^2} \right)$$
+        </div>
+        <p>Given $\gamma_1 = \gamma_2 = 0$, $f(x)$ is just a straight line in each domain. We factor the likelihood based on our subsets:</p>
+        <div class="math-display">
+            $$L \propto (\sigma^2)^{-\frac{n+1}{2}} \exp\left( -\frac{1}{2\sigma^2} \left[ \sum_{i \in I_1} (Y_i - \alpha_1 - \beta_1 x_i)^2 + \sum_{i \in I_2} (Y_i - \alpha_2 - \beta_2 x_i)^2 \right] \right)$$
+        </div>
+
+        <p><strong>Step 2: Solving for the Regression Coefficients (Part a)</strong></p>
+        <p>To maximize the likelihood with respect to the Greek parameters, we must strictly minimize the sum of squared errors in the exponent. Notice that $\alpha_1, \beta_1$ only appear in the first sum, and $\alpha_2, \beta_2$ only appear in the second sum. They do not interact.</p>
+        <p>Thus, the MLEs are exactly the standard OLS estimators computed separately on the two halves of the data:</p>
+        <div class="math-display">
+            $$\hat{\beta}_1 = \frac{\sum_{i \in I_1} (x_i - \bar{x}_1)(Y_i - \bar{Y}_1)}{\sum_{i \in I_1} (x_i - \bar{x}_1)^2}, \quad \hat{\alpha}_1 = \bar{Y}_1 - \hat{\beta}_1 \bar{x}_1$$
+        </div>
+        <div class="math-display">
+            $$\hat{\beta}_2 = \frac{\sum_{i \in I_2} (x_i - \bar{x}_2)(Y_i - \bar{Y}_2)}{\sum_{i \in I_2} (x_i - \bar{x}_2)^2}, \quad \hat{\alpha}_2 = \bar{Y}_2 - \hat{\beta}_2 \bar{x}_2$$
+        </div>
+
+        <p><strong>Step 3: Solving for Variance $\sigma^2$ (Part a)</strong></p>
+        <p>Once the mean parameters are optimized, let $RSS_1$ and $RSS_2$ be the minimized Residual Sum of Squares for each respective regression. Differentiating the log-likelihood with respect to $\sigma^2$ and setting it to zero yields the standard MLE for variance (the pooled RSS divided by the total number of data points, $n+1$):</p>
+        <div class="math-display">
+            $$\hat{\sigma}^2 = \frac{1}{n+1} (RSS_1 + RSS_2)$$
+        </div>
+
+        <hr style="border: 0; border-top: 1px dashed #e2e8f0; margin: 30px 0;">
+
+        <p><strong>Step 4: Extension to Unknown $\gamma$ for Part (b)</strong></p>
+        <p>If $\gamma_1, \gamma_2$ are unknown, the theoretical model simply upgrades from a segmented linear regression to a segmented quadratic (polynomial) regression.</p>
+        <p>Because there is still no continuity constraint given in the problem between the domains $x \leq 0.5$ and $x > 0.5$, the logical procedure remains identical:</p>
+        <ol>
+            <li><strong>Partition the data:</strong> Split the $(x_i, Y_i)$ dataset into subsets $I_1$ and $I_2$ as before.</li>
+            <li><strong>Run independent multiple regressions:</strong> For $I_1$, define the design matrix $\mathbf{X}_1$ with columns $(1, x_i, x_i^2)$. The MLE vector $(\hat{\alpha}_1, \hat{\beta}_1, \hat{\gamma}_1)^\top$ is the standard OLS solution $(\mathbf{X}_1^\top \mathbf{X}_1)^{-1} \mathbf{X}_1^\top \mathbf{Y}_1$.</li>
+            <li><strong>Repeat for subset 2:</strong> Obtain $(\hat{\alpha}_2, \hat{\beta}_2, \hat{\gamma}_2)^\top = (\mathbf{X}_2^\top \mathbf{X}_2)^{-1} \mathbf{X}_2^\top \mathbf{Y}_2$.</li>
+            <li><strong>Pool the Variance:</strong> Calculate the new quadratic residuals for both sets. The MLE for variance is again $\hat{\sigma}^2 = \frac{RSS_1 + RSS_2}{n+1}$.</li>
+        </ol>
+
+        <div class="conclusion-box">
+            <strong>Final Answer / Q.E.D:</strong><br>
+            (a) Because the parameters are completely unconstrained between domains, the MLEs are found by fitting two completely independent Simple Linear Regressions on the subsets $x \leq 0.5$ and $x > 0.5$. The variance MLE is the sum of their RSS divided by $n+1$.<br>
+            (b) For the quadratic extension, we proceed identically by fitting two independent Multiple Polynomial Regressions (degree 2) on the separated data sets and pooling their resultant squared errors to estimate $\sigma^2$.
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
