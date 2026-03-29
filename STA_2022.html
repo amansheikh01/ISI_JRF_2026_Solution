@@ -512,3 +512,52 @@
     </div>
 </div>
 
+
+<div class="question-section" id="q12">
+    <h2>📌 Q12 UMP Test for the Exponential Distribution (10 Marks)</h2>
+
+    <div class="problem-box">
+        <strong>Problem Statement:</strong> Let $X$ be a single observation from the density $f(x; \theta) = \theta e^{-\theta x}, x > 0$. We wish to test $H_0: \theta = 1$ against $H_1: \theta = 2$. Find the <strong>Uniformly Most Powerful (UMP)</strong> test of size $\alpha$.
+    </div>
+
+    <h3>🧠 Approach &amp; Key Concepts</h3>
+    <p>According to the <strong>Neyman-Pearson Lemma</strong>, the most powerful test for simple hypotheses is based on the likelihood ratio $\Lambda = \frac{L(\theta_1)}{L(\theta_0)}$. If the ratio is a monotonic function of a statistic $T(X)$, the test is UMP for a range of alternative values. Here, we evaluate the ratio of the two exponential densities and determine the critical region $C$ such that $P(X \in C | \theta=1) = \alpha$.</p>
+
+    <h3>✍️ Step-by-Step Proof / Derivation</h3>
+    
+    <p><strong>Step 1: Set up the Likelihood Ratio</strong></p>
+    <p>The ratio of the densities under the alternative ($\theta_1 = 2$) and null ($\theta_0 = 1$) is:</p>
+    <div class="math-display">
+        $$\frac{f(x; 2)}{f(x; 1)} = \frac{2 e^{-2x}}{1 e^{-1x}} = 2 e^{-x}$$
+    </div>
+    
+    <p><strong>Step 2: Determine the Critical Region</strong></p>
+    <p>The Neyman-Pearson Lemma states we reject $H_0$ if the likelihood ratio is greater than some constant $k$:</p>
+    <div class="math-display">
+        $$2 e^{-x} > k \implies e^{-x} > \frac{k}{2} \implies -x > \ln(k/2) \implies x < c$$
+    </div>
+    <p>Thus, the critical region is of the form $X < c$. This makes intuitive sense: if $\theta$ is larger, the mean $1/\theta$ is smaller, so we expect smaller values of $X$ under $H_1$.</p>
+
+    <p><strong>Step 3: Solve for the Critical Value $c$ using Size $\alpha$</strong></p>
+    <p>Under $H_0$, $\theta = 1$, so $X \sim \text{Exponential}(1)$. We require:</p>
+    <div class="math-display">
+        $$P(X < c | \theta=1) = \alpha \implies \int_{0}^{c} e^{-x} dx = \alpha$$
+    </div>
+    <div class="math-display">
+        $$[-e^{-x}]_0^c = \alpha \implies 1 - e^{-c} = \alpha \implies e^{-c} = 1 - \alpha$$
+    </div>
+    <div class="math-display">
+        $$c = -\ln(1 - \alpha)$$
+    </div>
+
+    <div class="conclusion-box">
+        <strong>Final Answer / Q.E.D:</strong> The UMP test of size $\alpha$ rejects $H_0$ if $X < -\ln(1 - \alpha)$. 
+    </div>
+</div>
+
+
+
+</div>
+
+</body>
+</html>
